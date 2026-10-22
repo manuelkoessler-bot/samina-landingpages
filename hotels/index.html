@@ -25,6 +25,8 @@
 <link rel="icon" href="img/logo-box.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/KeplerStd-Light.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero_2618_m.webp" media="(max-width:860px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero_2618.webp" media="(min-width:861px)" fetchpriority="high">
 <style>
 /* Schriften lokal (Style Guide 2027: Headlines Kepler Std, Texte Open Sans). Keine externen Dienste. */
 @font-face{font-family:"Kepler Std";src:url(fonts/KeplerStd-Light.woff2) format("woff2");font-weight:300;font-display:swap}
@@ -141,7 +143,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 .wave .s1{height:38.2%;background:var(--stone)}
 .wave .s2{height:61.8%;background:#E2DDCC;transition-delay:.21s}
 .wave .s2>*{transition-delay:.71s}
-.wave .s3{height:100%;color:#fff;background:var(--room) url(img/wald_bokeh_tief.jpg) center/cover;transition-delay:.42s;justify-content:flex-start}
+.wave .s3{height:100%;color:#fff;background:var(--room) url(img/wald_bokeh_tief.webp) center/cover;transition-delay:.42s;justify-content:flex-start}
 .wave .s3>*{transition-delay:.95s;position:relative}
 .wave .s3::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,122,63,.94) 0%,rgba(14,122,63,.84) 28%,rgba(14,122,63,.47) 54%,rgba(14,122,63,.10) 80%,rgba(14,122,63,0) 100%);pointer-events:none}
 .wave .when{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
@@ -203,7 +205,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 @media (max-width:860px){.prof{grid-template-columns:1fr;gap:var(--f5)}.prof{display:block}.prof .txt{margin-top:var(--f5)}.portrait{display:block;width:100%;min-height:0;height:0;padding-bottom:125%;aspect-ratio:auto}.badge{--bd:112px;top:var(--f3);right:var(--f3);bottom:auto;padding:var(--f2);font-size:9px;letter-spacing:.04em}.badge em{font-size:16px;margin:2px 0}.portrait figcaption{left:var(--f3);right:var(--f3);bottom:var(--f3)}.portrait figcaption b{font-size:24px}.portrait figcaption span{font-size:12px}}
 
 /* ---------- Dreiklang (Green-Room-Moment) ---------- */
-.trio-sec{background:var(--forest) url(img/wald_bokeh_tief.jpg) center/cover;color:#fff}
+.trio-sec{background:var(--forest) url(img/wald_bokeh_tief.webp) center/cover;color:#fff}
 .trio-sec .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .trio article{position:relative;isolation:isolate;min-height:clamp(420px,46vw,560px);display:flex;flex-direction:column;justify-content:flex-end;padding:var(--f4);overflow:hidden}
@@ -526,7 +528,7 @@ h3{font-size:var(--t-26);line-height:1.15}
     </div>
     <div class="trio">
       <article class="rv">
-        <img src="img/natur_bett_wald.jpg" alt="SAMINA Bett im Fichtenwald" loading="lazy">
+        <img src="img/natur_bett_wald.webp" alt="SAMINA Bett im Fichtenwald" loading="lazy">
         <span class="no">01</span>
         <h3>Natur</h3>
         <p class="hl">Naturmaterialien. Handgefertigt in Vorarlberg.</p>
@@ -540,7 +542,7 @@ h3{font-size:var(--t-26);line-height:1.15}
         <p>Fünf Schichten vom freischwingenden Lamellenrost bis zum Kissen, mit integrierter Körpererdung Lokosana®, einem registrierten Medizinprodukt. Dazu SAMINA GRAVITAS® für den Schlaf in sanfter Schräglage.</p>
       </article>
       <article class="rv d3">
-        <img src="img/wiss_forscher.jpg" alt="Forscher mit Unterlagen" loading="lazy" style="object-position:40% 30%">
+        <img src="img/wiss_forscher.webp" alt="Forscher mit Unterlagen" loading="lazy" style="object-position:40% 30%">
         <span class="no">03</span>
         <h3>Wissenschaft</h3>
         <p class="hl">Schlafforschung seit 1989. Schlafberatung. Schlafanalysen.</p>
@@ -562,7 +564,7 @@ h3{font-size:var(--t-26);line-height:1.15}
     </div>
     <div class="sys">
       <div class="explode rv" id="explode">
-        <img src="img/schichten_rahmen.jpg" alt="Die fünf Schichten des SAMINA Schlafsystems aus Naturmaterialien über dem Bettrahmen Adriano" width="1280" height="720" loading="lazy">
+        <img src="img/schichten_rahmen.webp" alt="Die fünf Schichten des SAMINA Schlafsystems aus Naturmaterialien über dem Bettrahmen Adriano" width="1280" height="720" loading="lazy">
         <button type="button" class="hs" style="left:62%;top:15%" data-l="0" aria-pressed="false" aria-label="Schicht 1">1</button>
         <button type="button" class="hs" style="left:66%;top:25%" data-l="1" aria-pressed="false" aria-label="Schicht 2">2</button>
         <button type="button" class="hs" style="left:66%;top:33%" data-l="2" aria-pressed="true" aria-label="Schicht 3">3</button>
@@ -748,7 +750,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 
 <!-- 11 · SCHLUSS -->
 <section class="end" id="ende">
-  <img src="img/natur_bett_wald.jpg" alt="" loading="lazy">
+  <img src="img/natur_bett_wald.webp" alt="" loading="lazy">
   <div class="endin">
     <div class="txt">
       <p class="eyebrow rv">Ihr Upgrade mit SAMINA</p>
@@ -885,7 +887,7 @@ document.querySelectorAll("[data-count]").forEach(n=>{ n.textContent=(0).toFixed
 const LN=76, lf=[], lcv=$("lcv"), lctx=lcv.getContext("2d"), st=$("statement"), stmt=$("stmt");
 let lcur=1, LW=0, LH=0, lstarted=false;
 function lload(){ if(lstarted) return; lstarted=true; for(let i=1;i<=LN;i++){ const im=new Image(); im.decoding="async"; im.src="logoframes/l"+String(i).padStart(3,"0")+".webp"; im.onload=()=>{ if(i===Math.round(lcur)) ldraw(lcur); }; lf[i]=im; } }
-new IntersectionObserver(es=>{ if(es[0].isIntersecting) lload(); },{rootMargin:"150% 0px"}).observe(st);
+new IntersectionObserver(es=>{ if(es[0].isIntersecting) lload(); },{rootMargin:"100% 0px"}).observe(st);
 function lsize(){ const d=Math.min(devicePixelRatio||1,1.5); LW=lcv.clientWidth; LH=lcv.clientHeight; lcv.width=Math.round(LW*d); lcv.height=Math.round(LH*d); lctx.setTransform(d,0,0,d,0,0); ldraw(lcur); }
 function ldraw(f){ let i=Math.round(f), im=lf[i]; for(let k=1;k<LN && !(im&&im.complete&&im.naturalWidth);k++) im=lf[i-k]||lf[i+k];
   if(!(im&&im.complete&&im.naturalWidth)) return; const nw=im.naturalWidth, nh=im.naturalHeight, s=Math.max(LW/nw, LH/nh), w=nw*s, h=nh*s;
