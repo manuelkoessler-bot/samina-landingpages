@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ihr Upgrade mit SAMINA | Bett- und Schlafsystem für Hotels</title>
+<meta name="description" content="Longevity ist in aller Munde und beginnt im Schlaf. Mit dem Bett- und Schlafsystem von SAMINA werden Hotels zum Vorreiter: Naturmaterialien, Schrägschlaf, Schlafforschung seit 1989.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://schlafen.samina.com/hotels/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ihr Upgrade mit SAMINA">
+<meta property="og:description" content="Longevity beginnt im Schlaf. Das Bett- und Schlafsystem für Hotels, die vorne sein wollen.">
+<meta property="og:url" content="https://schlafen.samina.com/hotels/">
+<meta property="og:image" content="https://schlafen.samina.com/hotels/img/og.jpg">
+<meta name="theme-color" content="#0B2418">
+<link rel="icon" href="img/logo-box.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/KeplerStd-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Schriften lokal (Style Guide 2027: Headlines Kepler Std, Texte Open Sans). Keine externen Dienste. */
+@font-face{font-family:"Kepler Std";src:url(fonts/KeplerStd-Light.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Kepler Std";src:url(fonts/KeplerStd-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url(fonts/OpenSans-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sans";src:url(fonts/OpenSans-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Open Sans";src:url(fonts/OpenSans-Italic.woff) format("woff");font-weight:400;font-style:italic;font-display:swap}
+
+/* Tokens 1:1 aus Style Guide 2027 V2 · Goldener Schnitt: Typo ×1,618, Abstände Fibonacci */
+:root{
+  --forest:#0B2418; --moss:#1E4A33; --room:#0E7A3F; --leaf:#1FA64F; --samina:#00943B;
+  --sprout:#9BE3A6; --stone:#EEEADD; --linen:#F8F6F0; --ink:#13201A; --ink-2:#4A5A50;
+  --line:rgba(19,32,26,.14); --line-inv:rgba(232,245,218,.24);
+  --serif:"Kepler Std",Georgia,"Times New Roman",serif;
+  --sans:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f1:8px; --f2:13px; --f3:21px; --f4:34px; --f5:55px; --f6:89px; --f7:144px;
+  --t-26:clamp(21px,2vw,26px); --t-42:clamp(30px,3.6vw,42px); --t-68:clamp(42px,5.6vw,68px); --t-110:clamp(55px,8.6vw,110px);
+  --sec:clamp(110px,13.5vw,200px); /* Sektionsabstand: mehr Luft */
+  --gut:max(16px,env(safe-area-inset-left,0px));
+  --c:max(var(--gut),clamp(16px,3.7vw,51px),calc((100vw - 1208px) / 2)); /* gemeinsame Inhaltskante: Header, Hero, Sektionen, Footer */
+  --phi:61.8%; --phi-s:38.2%;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0}
+.caps{letter-spacing:.07em}
+:focus-visible{outline:2px solid var(--samina);outline-offset:3px}
+.wrap{padding-inline:var(--c)}
+section{position:relative}
+.sec{padding-block:var(--sec)}
+.bg-stone{background:var(--stone)}
+.bg-room{background:var(--forest);color:#EAF3E6}
+.eyebrow{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--room);margin:0 0 var(--f3)}
+.bg-room .eyebrow,.on-green .eyebrow{color:var(--sprout)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+h1,h2{font-weight:300}
+h2{font-size:clamp(36px,4.6vw,64px);line-height:1.02;letter-spacing:-.01em}
+h3{font-size:var(--t-26);line-height:1.15}
+.lead{font-size:clamp(17px,1.4vw,19px);line-height:1.62;color:var(--ink-2);max-width:56ch}
+.bg-room .lead,.on-green .lead{color:rgba(234,243,230,.86)}
+.muted{color:var(--ink-2)}
+
+/* Buttons 1:1 Style Guide: eckig, SAMINA Grün, Open Sans Bold */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--samina);color:#fff;font:700 14px/1 var(--sans);padding:16px 24px;border:0;width:max-content;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:#007a31}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.line{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+.ctas{display:flex;flex-wrap:wrap;gap:var(--f2)}
+
+/* Platzhalter (vor Livegang klären) */
+.ph{background:#F2D49B;color:#13201A;padding:0 .25em;font-style:normal}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(21px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d2{transition-delay:.13s}.rv.d3{transition-delay:.21s}.rv.d4{transition-delay:.34s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------- Header wie samina.com: Logo links, Menü rechts, transparent ---------- */
+.shead{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--hh);display:flex;align-items:center;gap:var(--f3);padding:env(safe-area-inset-top,0px) var(--c) 0;color:#fff;transition:background .35s,height .35s}
+:root{--hh:clamp(64px,8.5vh,88px)}
+.shead.solid{--hh:64px;background:rgba(11,36,24,.95);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px)}
+.shead .logo{display:block;width:clamp(130px,12vw,173px);flex:none}
+.shead .logo img{width:100%;height:auto}
+.shead .kontakt{margin-left:auto;font:400 clamp(15px,1.15vw,16.5px)/1.2 var(--sans);text-decoration:none;border:1px solid currentColor;border-radius:6px;padding:11px 18px;white-space:nowrap}
+.shead .kontakt:hover{background:#fff;color:var(--forest)}
+@media (max-width:560px){.shead .kontakt{font-size:14px;padding:9px 13px}}
+@media (max-width:860px){:root{--hh:62px}.shead.solid{--hh:62px}}
+
+/* ---------- HERO: Bild randlos, Green Fade von links (Variante B), Text unten links auf der Inhaltskante ---------- */
+.hero{position:relative;min-height:100svh;background:var(--room);color:#fff;overflow:hidden;isolation:isolate;display:flex;align-items:flex-end}
+.hero .pic{position:absolute;inset:0;z-index:-1}
+.hero .pic img{width:100%;height:100%;object-fit:cover;object-position:60% 35%}
+.hero .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(14,122,63,.94) 0%,rgba(14,122,63,.94) 8.7%,rgba(14,122,63,0.93) 15.2%,rgba(14,122,63,0.89) 21.7%,rgba(14,122,63,0.84) 28.2%,rgba(14,122,63,0.76) 34.8%,rgba(14,122,63,0.67) 41.3%,rgba(14,122,63,0.57) 47.8%,rgba(14,122,63,0.47) 54.3%,rgba(14,122,63,0.37) 60.9%,rgba(14,122,63,0.27) 67.4%,rgba(14,122,63,0.18) 73.9%,rgba(14,122,63,0.10) 80.4%,rgba(14,122,63,0.05) 87.0%,rgba(14,122,63,0.01) 93.5%,rgba(14,122,63,0.00) 100.0%);width:61.8%}
+.hero .copy{width:100%;padding:calc(var(--hh) + var(--f4)) var(--c) clamp(34px,8vh,89px)}
+.hero .cb{max-width:min(560px,44vw);display:grid;gap:clamp(13px,2.2vh,21px)}
+.hero .eyebrow{color:var(--sprout);margin:0}
+.hero h1{font-size:clamp(42px,min(5.2vw,9.5vh),80px);line-height:.95;letter-spacing:-.01em}
+.hero .sub{font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:rgba(255,255,255,.92);max-width:46ch}
+.hero .ctas{margin-top:var(--f1)}
+.scrollhint{position:absolute;z-index:3;left:50%;bottom:var(--f3);width:1px;height:var(--f5);background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.8));animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:860px){
+  .hero{display:block;min-height:0}
+  .hero .pic{position:relative;inset:auto;height:62svh;margin-top:var(--hh)}
+  .hero .pic img{object-position:50% 12%}
+  .hero .pic::after{inset:auto 0 -1px 0;width:auto;height:61.8%;background:linear-gradient(to top,rgba(14,122,63,1) 0%,rgba(14,122,63,.94) 8.7%,rgba(14,122,63,0.84) 28.2%,rgba(14,122,63,0.57) 47.8%,rgba(14,122,63,0.27) 67.4%,rgba(14,122,63,0.05) 87.0%,rgba(14,122,63,0) 100%)}
+  .hero .copy{margin-top:-12svh;position:relative;padding:0 var(--c) var(--f5)}
+  .hero .cb{max-width:none}
+  .shead{background:var(--forest)}
+  .scrollhint{display:none}
+}
+
+/* ---------- WELLE ---------- */
+.welle{padding-block:var(--sec)}
+.welle .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:clamp(55px,10svh,89px)}
+.welle h2{font-size:clamp(34px,min(4.2vw,7svh),60px)}
+.welle .lead{font-size:clamp(15px,min(1.3vw,2.2svh),18px)}
+/* Treppe nach oben: Stufen wachsen beim Einblenden von unten */
+.wave{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.618fr);gap:var(--f2);align-items:end;height:clamp(320px,min(44vw,calc(100svh - 64px - 300px)),560px);padding-top:0}
+.wave .st{position:relative;display:flex;flex-direction:column;justify-content:flex-start;padding:clamp(21px,3svh,34px);transform:scaleY(.12);transform-origin:bottom;opacity:0;transition:transform 1.1s cubic-bezier(.2,.8,.2,1),opacity .6s}
+.wave .st>*{opacity:0;transition:opacity .6s .5s}
+.wave.in .st{transform:none;opacity:1}
+.wave.in .st>*{opacity:1}
+.wave .s1{height:38.2%;background:var(--stone)}
+.wave .s2{height:61.8%;background:#E2DDCC;transition-delay:.21s}
+.wave .s2>*{transition-delay:.71s}
+.wave .s3{height:100%;color:#fff;background:var(--room) url(img/wald_bokeh_tief.jpg) center/cover;transition-delay:.42s;justify-content:flex-end}
+.wave .s3>*{transition-delay:.95s;position:relative}
+.wave .s3::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,122,63,.94) 0%,rgba(14,122,63,.84) 28%,rgba(14,122,63,.47) 54%,rgba(14,122,63,.10) 80%,rgba(14,122,63,0) 100%);pointer-events:none}
+.wave .when{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.wave .what{font-family:var(--serif);font-weight:300;font-size:var(--t-42);line-height:1;margin:var(--f2) 0}
+.wave .st p{color:var(--ink-2);font-size:15px;max-width:34ch}
+.wave .s3 .when{color:var(--sprout)}
+.wave .s3 .what{font-size:clamp(46px,min(6.8vw,11svh),100px);line-height:.9;margin:var(--f2) 0 var(--f3)}
+.wave .s3 p{color:rgba(255,255,255,.9);font-size:16px;max-width:40ch}
+@media (prefers-reduced-motion:reduce){.wave .st,.wave .st>*{transform:none;opacity:1;transition:none}}
+/* Statement: Logo-Animation per Scroll (einziger Scroll-Effekt), endet weiß, dann erscheint das Statement */
+.statement{background:#fff;height:220svh}
+.statement .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center;text-align:center}
+.statement canvas{position:absolute;inset:0;width:100%;height:100%}
+.statement .wrap{position:relative;z-index:1;opacity:0;transform:translateY(21px);transition:opacity .2s linear}
+.statement p.big-s{font-family:var(--serif);font-weight:300;font-size:clamp(46px,7.4vw,110px);line-height:.98;letter-spacing:-.015em;max-width:14ch;margin:0 auto}
+.statement p.claim-s{margin-top:var(--f5);font-family:var(--serif);font-weight:300;font-size:var(--t-26);line-height:1.25;color:var(--room)}
+@media (prefers-reduced-motion:reduce){.statement{height:auto}.statement .stick{position:relative;padding-block:var(--sec)}.statement canvas{display:none}.statement .wrap{opacity:1;transform:none}}
+@media (max-width:860px){
+  .welle .head{grid-template-columns:1fr;gap:var(--f3);margin-bottom:var(--f5)}
+  .wave{grid-template-columns:1fr;height:auto;gap:var(--f1);padding-top:0}
+  .wave .s1,.wave .s2,.wave .s3{height:auto}
+  .wave .s1{margin-right:38.2%}
+  .wave .s2{margin-right:19.1%}
+  .wave .s3{min-height:340px}
+  .wave .st{transform:scaleX(.2);transform-origin:left}
+  }
+
+/* ---------- 90 % ---------- */
+.ninety{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);min-height:min(88svh,820px)}
+.ninety .pic{position:relative;overflow:hidden}
+.ninety .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%;transform:scale(1.06);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
+.ninety.in .pic img{transform:scale(1)}
+.ninety .txt{padding:var(--f6) var(--c) var(--f6) var(--f5);display:flex;flex-direction:column;justify-content:center}
+.big{font-family:var(--serif);font-weight:300;font-size:clamp(110px,14vw,178px);line-height:.82;letter-spacing:-.03em;color:var(--room)}
+.big small{font-size:.5em;letter-spacing:0}
+.ninety .claim90{font-family:var(--serif);font-weight:300;font-size:var(--t-42);line-height:1.05;margin:var(--f3) 0 var(--f2)}
+.cite{font-size:13px;color:var(--ink-2);margin-bottom:var(--f4)}
+.ninety .txt p.lead{margin-bottom:var(--f4)}
+@media (max-width:860px){
+  .ninety{grid-template-columns:1fr}
+  .ninety .pic{height:61.8vw;min-height:280px}
+  .ninety .txt{padding:var(--f5) var(--c)}
+}
+
+.chip{display:inline-block;background:var(--forest);color:#fff;font:700 11px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:8px 13px}
+/* ---------- Günther: Bild so hoch wie der Textblock, Titel im Bild, JENKE-Siegel rechts unten ---------- */
+.prof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--f6);align-items:stretch}
+.portrait{position:relative;margin:0;min-height:520px;isolation:isolate}
+.portrait>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;z-index:-2}
+.portrait::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(14,122,63,.94) 0%,rgba(14,122,63,.84) 14%,rgba(14,122,63,.57) 26%,rgba(14,122,63,.27) 36%,rgba(14,122,63,.05) 44%,rgba(14,122,63,0) 50%)}
+.portrait figcaption{position:absolute;left:var(--f4);right:38.2%;bottom:var(--f4);color:#fff}
+.portrait figcaption b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,32px);line-height:1.12}
+.portrait figcaption span{display:block;margin-top:var(--f1);font-size:13px;color:rgba(255,255,255,.88)}
+.badge{position:absolute;right:calc(-1 * var(--f4));bottom:calc(-1 * var(--f4));width:clamp(130px,11.8vw,170px);aspect-ratio:1;border-radius:50%;background:var(--samina);color:#fff;display:grid;place-items:center;text-align:center;padding:var(--f3);font:700 11px/1.35 var(--sans);letter-spacing:.06em;text-transform:uppercase;box-shadow:0 13px 34px rgba(11,36,24,.22)}
+.badge em{display:block;font-style:normal;font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:.02em;text-transform:none;margin:3px 0}
+.prof .txt{display:flex;flex-direction:column;justify-content:center;padding-block:var(--f4)}
+.prof .lead+.lead{margin-top:var(--f3)}
+@media (max-width:860px){.prof{grid-template-columns:1fr;gap:var(--f5)}.portrait{min-height:0;aspect-ratio:4/5}.badge{right:var(--f2);bottom:calc(-1 * var(--f3));width:118px}.portrait figcaption{right:var(--f6)}}
+
+/* ---------- Dreiklang (Green-Room-Moment) ---------- */
+.trio-sec{background:var(--forest) url(img/wald_bokeh_tief.jpg) center/cover;color:#fff}
+.trio-sec .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.trio article{position:relative;isolation:isolate;min-height:clamp(420px,46vw,560px);display:flex;flex-direction:column;justify-content:flex-end;padding:var(--f4);overflow:hidden}
+.trio article img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.trio article:hover img{transform:scale(1.04)}
+.trio article::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,122,63,.94) 0%,rgba(14,122,63,.94) 7.4%,rgba(14,122,63,0.93) 13.3%,rgba(14,122,63,0.89) 19.2%,rgba(14,122,63,0.84) 25.1%,rgba(14,122,63,0.76) 31.0%,rgba(14,122,63,0.67) 36.9%,rgba(14,122,63,0.57) 42.8%,rgba(14,122,63,0.47) 48.7%,rgba(14,122,63,0.37) 54.6%,rgba(14,122,63,0.27) 60.5%,rgba(14,122,63,0.18) 66.4%,rgba(14,122,63,0.10) 72.3%,rgba(14,122,63,0.05) 78.2%,rgba(14,122,63,0.01) 84.1%,rgba(14,122,63,0.00) 90.0%);z-index:-1}
+.trio .no{font-family:var(--serif);font-size:13px;letter-spacing:.14em;opacity:.8}
+.trio h3{font-size:var(--t-42);font-weight:300;margin:var(--f1) 0 var(--f2)}
+.trio .hl{font-weight:700;font-size:15px;line-height:1.45;margin-bottom:var(--f2)}
+.trio p{font-size:15px;line-height:1.55;color:rgba(255,255,255,.88)}
+@media (max-width:960px){.trio{grid-template-columns:1fr}.trio-sec .head{grid-template-columns:1fr;gap:var(--f3)}.trio article{min-height:440px}}
+
+/* ---------- Fünf Schichten (wie Schrägbett-Seite): Hotspots + Liste ---------- */
+.layers-sec .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
+.sys{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:center}
+.explode{position:relative;background:#E7E2D9}
+.explode img{width:100%;height:auto}
+.explode .hs{position:absolute;width:34px;height:34px;border-radius:50%;background:var(--room);color:#fff;font:700 14px/34px var(--sans);text-align:center;border:0;cursor:pointer;transform:translate(-50%,-50%);box-shadow:0 0 0 5px rgba(14,122,63,.18);transition:transform .2s,background .2s}
+.explode .hs[aria-pressed="true"],.explode .hs:hover{background:var(--forest);transform:translate(-50%,-50%) scale(1.12)}
+.explode .hs.opt{background:#fff;color:var(--room);box-shadow:0 0 0 2px var(--room)}
+.explode .hs.opt[aria-pressed="true"]{background:var(--room);color:#fff}
+.layers{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.layers li{border-bottom:1px solid var(--line)}
+.layers button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 13px;padding:16px 4px;cursor:pointer}
+.layers button:focus-visible{outline:2px solid var(--room);outline-offset:2px}
+.layers .n{font-family:var(--serif);font-size:24px;color:var(--room);line-height:1.15}
+.layers b{font-weight:700;font-size:16px}
+.layers .d{grid-column:2;font-size:15px;color:var(--ink-2);display:none}
+.layers li.on .d{display:block}
+.layers li.on b{color:var(--room)}
+.layers li.opt{border-top:1px dashed rgba(19,32,26,.35)}
+.layers li.opt b em{font-style:normal;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--room);margin-left:8px;white-space:nowrap}
+@media (max-width:960px){.layers-sec .head,.sys{grid-template-columns:1fr;gap:var(--f3)}}
+@media (max-width:640px){.explode .hs{width:22px;height:22px;font-size:11px;line-height:22px;box-shadow:0 0 0 3px rgba(14,122,63,.18)}}
+
+/* ---------- Lokosana (Sondermodus Medizinprodukt: Leinen, ruhig, Pflichtangabe eigene Zeile) ---------- */
+.loko .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
+.loko .wide{position:relative;margin:0}
+.loko .wide img{width:100%;aspect-ratio:2.2/1;object-fit:cover;object-position:40% 45%}
+.loko .ki{position:absolute;right:var(--f2);bottom:var(--f2);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.loko .data{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.loko .data div{padding:var(--f4) var(--f4) var(--f4) 0;border-right:1px solid var(--line)}
+.loko .data div+div{padding-left:var(--f4)}
+.loko .data div:last-child{border-right:0}
+.loko .data b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--t-42);line-height:1;color:var(--room);margin-bottom:var(--f2)}
+.loko .data span{font-size:15px;color:var(--ink-2)}
+.pro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--f5);align-items:center;margin-top:var(--f6)}
+.pro figure{margin:0;position:relative}
+.pro figure img{width:100%;aspect-ratio:1.618/1;object-fit:cover}
+.pro figcaption{position:absolute;left:var(--f3);bottom:var(--f3);color:#fff;font-family:var(--serif);font-size:var(--t-26);text-shadow:0 2px 13px rgba(0,0,0,.35)}
+.pro figcaption span{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.pro .names{font-family:var(--serif);font-weight:300;font-size:var(--t-26);line-height:1.35;margin:var(--f3) 0}
+.pro .names i{font-style:normal;color:var(--room)}
+.legal{margin-top:var(--f5);font-size:12px;color:var(--ink-2);max-width:90ch}
+@media (max-width:960px){.loko .head,.pro{grid-template-columns:1fr;gap:var(--f3)}.loko .data{grid-template-columns:1fr}.loko .data div,.loko .data div+div{padding:var(--f3) 0;border-right:0;border-bottom:1px solid var(--line)}.loko .wide img{aspect-ratio:4/5}}
+
+/* ---------- Schrägbett: festes Bild bei 3,5° ---------- */
+.tilt{background:var(--stone)}
+.tilt .stick{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);align-items:center}
+.tilt .txt{padding:var(--sec) var(--f5) var(--sec) var(--c);width:100%}
+.tilt .txt .lead{font-size:16px}
+.tilt .stage{position:relative;width:100%;aspect-ratio:16/9;align-self:center;overflow:hidden}
+.tilt .stage img{width:100%;height:100%;object-fit:cover}
+.hud{position:absolute;right:var(--f4);top:var(--f4);text-align:right}
+.hud .deg{font-family:var(--serif);font-weight:300;font-size:clamp(68px,8vw,110px);line-height:.9;color:var(--room)}
+.hud .tag{font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--room);margin-top:var(--f2)}
+.hud .cm{font-size:13px;color:var(--ink-2);margin-top:6px}
+.tilt .chip{margin-bottom:var(--f3)}
+.tilt .note{border-left:2px solid var(--room);padding-left:var(--f3);margin-top:var(--f4);font-size:15px;color:var(--ink-2)}
+.tilt .note b{color:var(--ink)}
+@media (max-width:860px){
+  .tilt .stick{grid-template-columns:1fr}
+  .tilt .stage{order:-1}
+  .tilt .txt{padding:var(--f5) var(--c)}
+  .hud{top:var(--f3);right:var(--f3)}
+  .hud .deg{font-size:55px}
+}
+/* Gäste-Zitat */
+.quote{padding-block:var(--sec);text-align:center}
+.quote blockquote{margin:0 auto;max-width:24ch;font-family:var(--serif);font-weight:300;font-size:var(--t-42);line-height:1.18}
+.quote blockquote::before{content:"„";display:block;font-size:2.2em;line-height:.6;color:var(--room);margin-bottom:var(--f2)}
+.quote figcaption{margin-top:var(--f4);font-size:14px;color:var(--ink-2)}
+.quote .deg35{display:inline-flex;align-items:center;gap:var(--f2);margin-top:var(--f4);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--room)}
+.quote .deg35 i{display:block;width:89px;height:1px;background:var(--room);transform:rotate(-3.5deg)}
+
+/* ---------- Trust-Laufband ---------- */
+.trust .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
+.marq{overflow:hidden;padding-left:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marq+.marq{margin-top:var(--f3)}
+.track{display:flex;gap:var(--f3);width:max-content;animation:run var(--dur,70s) linear infinite}
+.marq.rev .track{animation-direction:reverse}
+.marq:hover .track{animation-play-state:paused}
+@keyframes run{to{transform:translateX(calc(-50% - var(--f3)/2))}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.marq{overflow-x:auto}}
+.hcard{flex:none;position:relative;width:clamp(300px,36vw,560px);aspect-ratio:1.618/1;overflow:hidden;isolation:isolate}
+.hcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.hcard:hover img{transform:scale(1.05)}
+.hcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(14,122,63,.92) 0%,rgba(14,122,63,.6) 22%,rgba(14,122,63,.12) 46%,rgba(14,122,63,0) 60%)}
+.hcard figcaption{position:absolute;left:var(--f3);right:var(--f3);bottom:var(--f3);color:#fff}
+.hcard b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,30px);line-height:1.1}
+.hcard span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
+.people-head{margin-top:var(--f6);padding-top:var(--f5);border-top:1px solid var(--line);margin-bottom:var(--f4)}
+.people-head .ph-grid{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end}
+.people-head h3{font-size:var(--t-42);font-weight:300;line-height:1.05}
+@media (max-width:860px){.people-head .ph-grid{grid-template-columns:1fr;gap:var(--f2)}}
+.pcard{flex:none;display:flex;align-items:center;gap:var(--f3);background:var(--stone);padding:var(--f2) var(--f4) var(--f2) var(--f2);width:max-content}
+.pcard img{width:89px;height:89px;object-fit:cover}
+.pcard b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.2}
+.pcard span{font-size:13px;color:var(--ink-2)}
+.pcard.hi{background:var(--forest);color:#fff}
+.pcard.hi span{color:var(--sprout)}
+@media (max-width:860px){.trust .head{grid-template-columns:1fr;gap:var(--f3)}}
+
+/* ---------- Fallstudie Luisenhöhe ---------- */
+.case{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:center}
+.case .pic{position:relative;aspect-ratio:1.43/1;overflow:hidden}
+.case .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.2s ease,transform 6s ease}
+.case .pic img.on{opacity:1;transform:none}
+.case .pic .tag{z-index:2}
+.case .pic .dots{position:absolute;right:var(--f3);bottom:var(--f3);display:flex;gap:8px;z-index:2}
+.case .pic .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer}
+.case .pic .dots button[aria-selected="true"]{background:#fff}
+.case .pic .tag{position:absolute;left:var(--f3);top:var(--f3)}
+.case blockquote{margin:var(--f4) 0 var(--f2);font-family:var(--serif);font-weight:300;font-size:var(--t-26);line-height:1.3}
+.case blockquote::before{content:"„";color:var(--room)}
+.case blockquote::after{content:"“";color:var(--room)}
+.case .who{font-size:14px;color:var(--ink-2)}
+.case .who b{color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--f3);margin-top:var(--f5);border-top:1px solid var(--line);padding-top:var(--f4)}
+.facts div{font-size:15px;color:var(--ink-2)}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:var(--t-26);color:var(--room);line-height:1.15;margin-bottom:6px}
+@media (max-width:960px){.case{grid-template-columns:1fr;gap:var(--f4)}.facts{grid-template-columns:1fr 1fr}}
+
+/* ---------- Partner / Initiative ---------- */
+.part .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f6)}
+.bens{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.bens div{padding:var(--f4) var(--f4) var(--f4) 0;border-right:1px solid var(--line)}
+.bens div+div{padding-left:var(--f4)}
+.bens div:last-child{border-right:0}
+.bens .n{font-family:var(--serif);font-size:13px;letter-spacing:.14em;color:var(--room)}
+.bens h3{margin:var(--f2) 0}
+.bens p{font-size:15px;color:var(--ink-2)}
+.steps{margin-top:var(--f6);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--f5);align-items:start}
+.steps ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:55px 1fr;gap:var(--f3);padding:var(--f3) 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--serif);font-weight:300;font-size:42px;line-height:1;color:var(--room)}
+.steps li b{display:block;font-size:17px}
+.steps li span{color:var(--ink-2);font-size:15px}
+@media (max-width:960px){
+  .part .head,.steps{grid-template-columns:1fr;gap:var(--f3)}
+  .bens{grid-template-columns:1fr 1fr}
+  .bens div,.bens div+div{padding:var(--f3) var(--f2) var(--f3) 0;border-right:0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:560px){.bens{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--f5)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:var(--f3);padding:var(--f3) 0;font-family:var(--serif);font-size:var(--t-26);line-height:1.2}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-weight:400;color:var(--room);font-size:26px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 var(--f3);color:var(--ink-2);max-width:62ch}
+@media (max-width:860px){.faq .grid{grid-template-columns:1fr;gap:var(--f3)}}
+
+/* ---------- Kontakt ---------- */
+.kon .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:var(--f5);align-items:start}
+.cards{position:relative}
+.card{background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);min-height:300px;animation:fadein .5s ease}
+@keyframes fadein{from{opacity:0;transform:translateX(13px)}to{opacity:1;transform:none}}
+.card .ph-img{background:var(--stone);display:grid;place-items:center;font-family:var(--serif);font-size:55px;color:var(--room)}
+.card img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+.card .b{padding:var(--f4);display:flex;flex-direction:column;gap:6px}
+.card .nm{font-family:var(--serif);font-size:var(--t-26);line-height:1.15}
+.card .fn{font-size:13px;color:var(--ink-2);margin-bottom:var(--f2)}
+.card a.l{font-size:15px;text-decoration:none}
+.card a.l:hover{color:var(--room)}
+.card .act{display:flex;flex-wrap:wrap;gap:var(--f1);margin-top:auto;padding-top:var(--f3)}
+.card .act .btn{padding:13px 16px;font-size:13px}
+.card .web{font-size:12px;color:var(--ink-2);margin-top:var(--f2)}
+.card .web a{color:var(--room)}
+.card .act .btn.wa{background:#25D366;color:#fff}
+.card .act .btn.wa:hover{background:#1da851}
+.card .act .btn svg{margin-right:2px}
+#toast{position:fixed;left:50%;bottom:calc(var(--f5) + env(safe-area-inset-bottom,0px));transform:translate(-50%,21px);background:var(--forest);color:#fff;font-size:14px;padding:13px 21px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:60;max-width:calc(100vw - 32px)}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.switch{display:flex;align-items:center;gap:var(--f2);margin-top:var(--f3)}
+.switch .who{display:flex;gap:var(--f1);flex-wrap:wrap}
+.switch .who button{font:400 14px/1 var(--sans);background:none;border:1px solid var(--line);padding:9px 13px;cursor:pointer;color:var(--ink-2)}
+.switch .who button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.switch .nav{display:flex;gap:6px;margin-left:auto}
+.switch .nav button{width:42px;height:42px;border:1px solid var(--ink);background:none;cursor:pointer;font-size:18px;color:var(--ink)}
+.switch .nav button:hover{background:var(--ink);color:#fff}
+@media (max-width:640px){.card{grid-template-columns:1fr}.card img,.card .ph-img{aspect-ratio:1.618/1;height:auto}.switch .nav{display:none}}
+@media (max-width:860px){.kon .grid{grid-template-columns:1fr;gap:var(--f4)}}
+
+/* ---------- Schluss + Footer (Green Room, vertikales Lockup 1:1 Style Guide) ---------- */
+.end{position:relative;isolation:isolate;color:#fff;min-height:min(92svh,860px);display:flex;align-items:flex-end;overflow:hidden}
+.end>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;z-index:-2}
+.end::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to right,rgba(14,122,63,.94) 0%,rgba(14,122,63,.94) 8.7%,rgba(14,122,63,0.93) 15.2%,rgba(14,122,63,0.89) 21.7%,rgba(14,122,63,0.84) 28.2%,rgba(14,122,63,0.76) 34.8%,rgba(14,122,63,0.67) 41.3%,rgba(14,122,63,0.57) 47.8%,rgba(14,122,63,0.47) 54.3%,rgba(14,122,63,0.37) 60.9%,rgba(14,122,63,0.27) 67.4%,rgba(14,122,63,0.18) 73.9%,rgba(14,122,63,0.10) 80.4%,rgba(14,122,63,0.05) 87.0%,rgba(14,122,63,0.01) 93.5%,rgba(14,122,63,0.00) 100.0%)}
+.end .endin{--lw:clamp(34px,4.2vw,55px);width:100%;display:flex;justify-content:space-between;align-items:flex-end;gap:var(--f5);padding:var(--f6) var(--c) var(--f5)}
+.end .txt{max-width:560px;min-width:0;flex:1}
+@media (max-width:560px){.end .claim{font-size:clamp(32px,9vw,40px)}.end .endin{gap:var(--f3)}.end::before{background:linear-gradient(to top,rgba(14,122,63,.96) 0%,rgba(14,122,63,.9) 30%,rgba(14,122,63,.6) 50%,rgba(14,122,63,.2) 70%,rgba(14,122,63,0) 85%)}}
+.end .claim{font-family:var(--serif);font-weight:300;font-size:var(--t-68);line-height:1;margin:0 0 var(--f3)}
+.end .url{font-size:14px;opacity:.86;margin:var(--f3) 0 var(--f4)}
+.end .url a{text-decoration:none}
+.vlock{display:inline-flex;flex-direction:column;align-items:center;gap:calc(var(--lw)*.382)}
+.vlock img{width:var(--lw);height:auto}
+.vlock .d{writing-mode:vertical-rl;transform:rotate(180deg);width:var(--lw);font-family:var(--sans);font-size:calc(var(--lw)*.56);line-height:calc(var(--lw)*.58);position:relative;left:calc(var(--lw)*-.1);font-weight:400;letter-spacing:.01em;text-transform:uppercase;color:#fff;white-space:nowrap;text-align:start}
+.vlock .d span{display:block;text-transform:none}
+.vlock .d span.u{text-transform:uppercase}
+.end .vlock{flex:none}
+.foot{background:var(--forest);color:rgba(234,243,230,.78);font-size:13px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--f2) var(--f4);padding-block:var(--f4) calc(var(--f4) + env(safe-area-inset-bottom,0px))}
+.foot nav{display:flex;flex-wrap:wrap;gap:var(--f3)}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.foot .nocookie{width:100%;color:rgba(234,243,230,.6);font-size:12px}
+
+/* Mobile CTA-Leiste */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:var(--f1) var(--c) calc(var(--f1) + env(safe-area-inset-bottom,0px));background:rgba(11,36,24,.96);transform:translateY(110%);transition:transform .35s}
+.mbar.on{transform:none}
+.mbar .btn{width:100%;justify-content:center}
+@media (max-width:860px){.mbar{display:block}.foot .wrap{padding-bottom:calc(var(--f6) + env(safe-area-inset-bottom,0px))}}
+</style>
+</head>
+<body>
+
+<header class="shead" id="shead">
+  <a class="logo" href="https://samina.com/" aria-label="SAMINA Startseite"><img src="img/logo-wort.svg" alt="SAMINA" width="110" height="21"></a>
+  <a class="kontakt" href="#kontakt">Gespräch vereinbaren</a>
+</header>
+
+<main>
+
+<!-- 01 · HERO -->
+<section class="hero" id="top">
+  <div class="pic">
+    <picture>
+      <source media="(max-width:860px)" srcset="img/hero_3437_m.webp">
+      <img src="img/hero_3437.webp" alt="Frau sitzt am Morgen entspannt auf einem SAMINA Bett in einem hellen Hotelzimmer mit Panoramafenster" width="2560" height="1920" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="copy">
+    <div class="cb">
+      <p class="eyebrow rv">SAMINA für Hotels</p>
+      <h1 class="rv d2">Ihr Upgrade<br>mit <span class="caps">SAMINA</span>.</h1>
+      <p class="sub rv d3">Longevity ist in aller Munde, und sie beginnt im Schlaf. Mit dem Bett- und Schlafsystem von SAMINA bieten Sie Ihren Gästen, wonach sie gerade suchen. Und Sie positionieren sich dort, wo alle hinwollen: ganz vorne.</p>
+      <div class="ctas rv d3">
+        <a class="btn" href="#kontakt">Vorreiter werden <span class="arr">→</span></a>
+        <a class="btn ghost" href="#welle">Warum jetzt</a>
+      </div>
+    </div>
+  </div>
+  <span class="scrollhint" aria-hidden="true"></span>
+</section>
+
+<!-- 02 · DIE WELLE -->
+<section class="sec welle" id="welle">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">Die Welle</p>
+        <h2 class="rv d2">Alle reden über Longevity. Ihre Gäste auch.</h2>
+      </div>
+      <p class="lead rv d3">Gäste messen ihren Schlaf am Handgelenk, hören Podcasts über Regeneration und buchen Reisen, die mehr können als Erholung. Spa, Sauna und gute Küche bleiben wichtig. Doch wer Longevity ernst nimmt, kommt am Schlaf nicht vorbei.</p>
+    </div>
+    <div class="wave" id="wave">
+      <div class="st s1"><p class="when">Gestern</p><p class="what">Wellness</p><p>Pool, Sauna, Massage. Heute Standard in fast jedem guten Haus.</p></div>
+      <div class="st s2"><p class="when">Heute</p><p class="what">Spa &amp; Fitness</p><p>Größer, schöner, teurer. Und trotzdem immer schwerer zu unterscheiden.</p></div>
+      <div class="st s3"><p class="when">Jetzt</p><p class="what">Longevity</p><p>Regeneration, die man spürt und am nächsten Morgen erzählt. Sie beginnt dort, wo Ihr Gast ein Drittel seines Aufenthalts verbringt: im Bett.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02b · STATEMENT -->
+<section class="statement" id="statement">
+  <div class="stick">
+    <canvas id="lcv" aria-hidden="true"></canvas>
+    <div class="wrap" id="stmt">
+      <p class="big-s">Der Erste setzt den Maßstab.</p>
+      <p class="claim-s" translate="no" lang="en">Sleep <span class="caps">SAMINA</span>. Design your Longevity</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · 90 % -->
+<section class="ninety bg-stone" id="schlaf">
+  <div class="pic"><img src="img/sleep_2616.webp" alt="Frau schläft lächelnd auf der Seite in einem hellen Hotelzimmer" loading="lazy" width="2000" height="1500"></div>
+  <div class="txt">
+    <div class="big rv"><span data-count="90">90</span><small>&#8239;%</small></div>
+    <p class="claim90 rv d2">Longevity beginnt im Schlaf.</p>
+    <p class="cite rv d2">Prof. W. C. Dement, Stanford, 1998</p>
+    <p class="lead rv d3">Rund acht Stunden pro Nacht entscheidet sich, wie Ihr Gast am Morgen aufwacht. Und wie er von Ihrem Haus erzählt. Kein Treatment wirkt so lange wie eine gute Nacht.</p>
+    <a class="btn line rv d4" href="#system">Was SAMINA besonders macht <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- 04 · WISSENSCHAFT: PROF. -->
+<section class="sec" id="forschung">
+  <div class="wrap prof">
+    <figure class="portrait rv">
+      <img src="img/guenther_hoch.webp" alt="Prof. Dr. med. h.c. Günther W. Amann-Jennson" loading="lazy" width="1200" height="1500">
+      <figcaption><b>Prof. Dr. med. h.c. Günther W. Amann-Jennson</b><span>Schlafforscher, Gründer und wissenschaftliche Leitung SAMINA</span></figcaption>
+      <span class="badge">Bekannt aus dem<em>JENKE-Experiment</em>ProSieben | Joyn</span>
+    </figure>
+    <div class="txt">
+      <p class="eyebrow rv">Die Wissenschaft dahinter</p>
+      <h2 class="rv d2">Schlafforschung seit 1989.</h2>
+      <p class="lead rv d3" style="margin-top:var(--f4)">Seit über drei Jahrzehnten erforscht Prof. Dr. med. h.c. Günther W. Amann-Jennson, was Schlaf erholsam macht. Für die Hotellerie hat er das Konzept <b>POWER SLEEPING ROOMS®</b> entwickelt: Zimmer, in denen Bett, Bettklima, Licht und Materialien auf eine ruhige Nacht abgestimmt sind.</p>
+      <p class="lead rv d4">Sie bekommen damit kein neues Möbelstück, sondern ein Schlafkonzept mit Herkunft. Eines, das man Gästen erklären kann, und das sie selbst erleben.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · NATUR · TECHNIK · WISSENSCHAFT (Green-Room-Moment) -->
+<section class="sec trio-sec on-green" id="system">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">Was SAMINA besonders macht</p>
+        <h2 class="rv d2">Natur. Technik. Wissenschaft.</h2>
+      </div>
+      <p class="lead rv d3">Drei Säulen, ein System. Damit Ihre Gäste nicht einfach ein gutes Bett vorfinden, sondern eine Nacht, die anders ist.</p>
+    </div>
+    <div class="trio">
+      <article class="rv">
+        <img src="img/natur_bett_wald.jpg" alt="SAMINA Bett im Fichtenwald" loading="lazy">
+        <span class="no">01</span>
+        <h3>Natur</h3>
+        <p class="hl">Naturmaterialien. Handgefertigt in Vorarlberg.</p>
+        <p>Schafschurwolle, Naturkautschuk, Massivholz und Bio-Baumwolle. Metallfrei gebaut in unserer Manufaktur in Frastanz.</p>
+      </article>
+      <article class="rv d2">
+        <img src="img/adriano_wildeiche.webp" alt="Bettrahmen Adriano aus Wildeiche, metallfrei gefertigt" loading="lazy" style="object-position:50% 50%">
+        <span class="no">02</span>
+        <h3>Technik</h3>
+        <p class="hl">Schrägschlaf. Körpererdung. Longevity-Anwendungen.</p>
+        <p>Fünf Schichten vom freischwingenden Lamellenrost bis zum Kissen, mit integrierter Körpererdung Lokosana®, einem registrierten Medizinprodukt. Dazu SAMINA GRAVITAS® für den Schlaf in sanfter Schräglage.</p>
+      </article>
+      <article class="rv d3">
+        <img src="img/wiss_forscher.jpg" alt="Forscher mit Unterlagen" loading="lazy" style="object-position:40% 30%">
+        <span class="no">03</span>
+        <h3>Wissenschaft</h3>
+        <p class="hl">Schlafforschung seit 1989. Schlafberatung. Schlafanalysen.</p>
+        <p>Jedes Zimmer basiert auf Erkenntnissen aus über drei Jahrzehnten Schlafforschung und Beratung.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 05b · FÜNF SCHICHTEN -->
+<section class="sec bg-stone layers-sec" id="schichten">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">Das SAMINA Bett- und Schlafsystem</p>
+        <h2 class="rv d2">Fünf Schichten. Ein System.</h2>
+      </div>
+      <p class="lead rv d3">Fünf Schichten aus Naturmaterialien, die zusammenwirken, mit Körpererdung im System. Sie passen in nahezu jeden Bettrahmen. Mit dem Bettrahmen Adriano kommt SAMINA GRAVITAS® dazu, für den Schlaf in sanfter Schräglage.</p>
+    </div>
+    <div class="sys">
+      <div class="explode rv" id="explode">
+        <img src="img/schichten_rahmen.jpg" alt="Die fünf Schichten des SAMINA Schlafsystems aus Naturmaterialien über dem Bettrahmen Adriano" width="1280" height="720" loading="lazy">
+        <button type="button" class="hs" style="left:62%;top:15%" data-l="0" aria-pressed="false" aria-label="Schicht 1">1</button>
+        <button type="button" class="hs" style="left:66%;top:25%" data-l="1" aria-pressed="false" aria-label="Schicht 2">2</button>
+        <button type="button" class="hs" style="left:66%;top:33%" data-l="2" aria-pressed="true" aria-label="Schicht 3">3</button>
+        <button type="button" class="hs" style="left:66%;top:42%" data-l="3" aria-pressed="false" aria-label="Schicht 4">4</button>
+        <button type="button" class="hs" style="left:66%;top:52%" data-l="4" aria-pressed="false" aria-label="Schicht 5">5</button>
+        <button type="button" class="hs opt" style="left:70%;top:78%" data-l="5" aria-pressed="false" aria-label="Bettrahmen Adriano">+</button>
+      </div>
+      <ol class="layers rv d2" id="layers">
+        <li><button type="button"><span class="n">1</span><b>Kissen und Decken</b><span class="d">Kissen für jede Schlafposition, Decken mit Schafschurwolle, Bezüge aus Bio-Baumwolle.</span></button></li>
+        <li><button type="button"><span class="n">2</span><b>Schafschurwollauflage</b><span class="d">Hält trocken und sorgt für ein ausgeglichenes Schlafklima, in jeder Jahreszeit.</span></button></li>
+        <li class="on"><button type="button"><span class="n">3</span><b>Lokosana® Körpererdung</b><span class="d">Registriertes und CE-gekennzeichnetes Medizinprodukt aus dem Hause SAMINA. Silber-Baumwoll-Gewebe, das durch die Wollschicht hindurch wirkt, ohne direkten Hautkontakt.</span></button></li>
+        <li><button type="button"><span class="n">4</span><b>Naturkautschukmatratze</b><span class="d">Vita Talalay, punktelastisch und ohne Metallfedern. Passt sich dem Körper an und folgt der Neigung mit.</span></button></li>
+        <li><button type="button"><span class="n">5</span><b>Freischwingender Lamellenrost</b><span class="d">Jede Lamelle schwingt einzeln mit und unterstützt die orthopädisch richtige Lagerung der Wirbelsäule, flach genauso wie in der Schräglage.</span></button></li>
+        <li class="opt"><button type="button"><span class="n">+</span><b>Bettrahmen Adriano mit SAMINA GRAVITAS® <em>optional</em></b><span class="d">Massivholz, metallfrei, handgefertigt. Mit ihm kommt die Neigung ins System: 0, 3,5 oder 5,5° mit einem Handgriff. Unsere Empfehlung für Hotels: 3,5°.</span></button></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 05c · LOKOSANA (Material: Lokosana-Broschüre v12) -->
+<section class="sec loko" id="lokosana">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">Lokosana® · Körpererdung im SAMINA System</p>
+        <h2 class="rv d2">Geerdet schlafen. Mit einem registrierten Medizinprodukt.</h2>
+      </div>
+      <p class="lead rv d3">Über Jahrtausende war der Kontakt zur Erde selbstverständlich. Lokosana® bringt diese Verbindung dorthin, wo Ihre Gäste jede Nacht viele Stunden verbringen: ins Bett. Integriert in das SAMINA Schlafsystem, unsichtbar unter der Schafschurwollauflage.</p>
+    </div>
+    <figure class="wide rv"><picture><source media="(max-width:860px)" srcset="img/loko_greenroom_hoch.webp"><img src="img/loko_greenroom.webp" alt="Frau im weißen Seidenpyjama liegt mit offenen Augen auf der Lokosana Erdungsauflage im Green Room" loading="lazy" width="1656" height="932"></picture><span class="ki">KI-generiert</span></figure>
+    <div class="data">
+      <div class="rv"><b>Klasse I</b><span>Registriertes und CE-gekennzeichnetes Medizinprodukt, bei Swissmedic registriert</span></div>
+      <div class="rv d2"><b>99,99&#8239;%</b><span>Reinheitsgrad des Silbers im leitfähigen Silber-Baumwoll-Gewebe</span></div>
+      <div class="rv d3"><b>Ohne Hautkontakt</b><span>Die Erdung wirkt durch Schafschurwollauflage und Bettüberzug hindurch</span></div>
+    </div>
+    <div class="pro">
+      <figure class="rv"><img src="img/h_clinicum.webp" alt="Helles Zimmer mit Bergblick in einer Gesundheitseinrichtung" loading="lazy" width="1200" height="710"></figure>
+      <div>
+        <p class="eyebrow rv">Im professionellen Einsatz</p>
+        <h3 class="rv d2" style="font-size:var(--t-42);font-weight:300;line-height:1.05">Häuser, deren Gäste nur aus einem Grund anreisen, können sich beim Bett keine Kompromisse leisten.</h3>
+        <p class="names rv d3">Lokosana® ist weltweit im Einsatz: in Premium-Hotels, Gesundheitseinrichtungen und Privatkliniken.</p>
+      </div>
+    </div>
+    <p class="legal rv">Lokosana® ist ein registriertes und CE-gekennzeichnetes Medizinprodukt der Klasse I zur Erdung am Schlafplatz. Es ist zur Förderung der Schlaf- und Regenerationsqualität bestimmt.</p>
+  </div>
+</section>
+
+<!-- 06 · SCHRÄGBETT + JENKE (Scroll-Scrub) -->
+<section class="tilt" id="schraegbett">
+  <div class="stick">
+    <div class="txt">
+      <span class="chip rv">ProSieben | Joyn · 08.10.2026</span>
+      <p class="eyebrow rv">Das Schrägbett · SAMINA GRAVITAS®</p>
+      <h2 class="rv d2" style="font-size:var(--t-42);line-height:1.05;margin-bottom:var(--f3)">Seit dem JENKE-Experiment spricht man über das Schrägbett.</h2>
+      <p class="lead rv d3">Am 8. Oktober lief das JENKE-Experiment auf ProSieben, mit Prof. Dr. med. h.c. Günther W. Amann-Jennson und dem SAMINA Schlafsystem in Schräglage. Seitdem fragen uns viele Menschen danach. Hotels, die es anbieten, haben genau das, wonach Gäste gerade suchen.</p>
+      <p class="note rv d4"><b>Unsere Empfehlung für Hotels: 3,5°.</b> Die ganze Liegefläche ist sanft geneigt, das Kopfende liegt rund 12 cm höher. Am Bettrahmen Adriano lässt sich die Neigung mit einem Handgriff auch zurück auf flach stellen.</p>
+    </div>
+    <div class="stage">
+      <img src="img/adriano_35.webp" alt="Bettrahmen Adriano aus Massivholz, auf 3,5 Grad geneigt" loading="lazy" width="1280" height="720">
+      <div class="hud" aria-hidden="true" id="hud">
+        <div class="deg"><span data-count="3.5" data-dec="1">3,5</span>°</div>
+        <div class="tag">Empfehlung für Hotels</div>
+        <div class="cm">Kopfende +12 cm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="stimme" style="background:#fff">
+  <div class="wrap">
+    <figure class="rv" style="margin:0">
+      <blockquote>Unsere Gäste erzählen beim Frühstück, wie gut sie geschlafen haben. Dass ihr Bett 3,5 Grad geneigt war, haben sie gar nicht bemerkt.</blockquote>
+      <figcaption><b style="color:var(--ink)">Peterhof Chalets Furx</b> · Premium-Resort in Vorarlberg, exklusives Partnerhotel von SAMINA</figcaption>
+    </figure>
+    <span class="deg35 rv d2"><i></i>3,5° · man spürt es kaum</span>
+  </div>
+</section>
+
+<!-- 07 · TRUST: Partnerhotels + bekannte SAMINA Schläfer -->
+<section class="sec trust" id="referenzen">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">In bester Gesellschaft</p>
+        <h2 class="rv d2">Rund <span data-count="150">150</span> Hotels schlafen schon mit SAMINA.</h2>
+      </div>
+      <p class="lead rv d3">Von der Eco Lodge bis zum Gesundheitsresort setzen Häuser der 4- und 5-Sterne-Kategorie auf SAMINA. Und mit ihnen Menschen, die von Berufs wegen auf Regeneration achten.</p>
+    </div>
+  </div>
+  <div class="marq rv" style="--dur:80s"><div class="track" id="hotels"></div></div>
+  <div class="wrap people-head">
+    <p class="eyebrow rv">Menschen · Fans · SAMINA Schläfer</p>
+    <div class="ph-grid">
+      <h3 class="rv d2">Erfolg beginnt mit Schlaf.</h3>
+      <p class="lead rv d3">Spitzenathleten, Ärzte, führende Köpfe und Premium-Hotels setzen weltweit auf SAMINA.</p>
+    </div>
+  </div>
+  <div class="marq rev rv d2" style="--dur:95s"><div class="track" id="people"></div></div>
+</section>
+
+<!-- 07b · FALLSTUDIE LUISENHÖHE (Imagebroschüre S. 40/41) -->
+<section class="sec bg-stone" id="fallstudie">
+  <div class="wrap">
+    <div class="case">
+      <figure class="pic rv" id="lhshow" style="margin:0" aria-label="Bilder aus dem Gesundheitsresort Luisenhöhe">
+        <img class="on" src="img/h_luisenhoehe_pool.webp" alt="Außenpool der Luisenhöhe mit Blick auf das Resort" loading="lazy">
+        <img src="img/h_luisenhoehe_luft.webp" alt="Luftaufnahme der Luisenhöhe im Schwarzwald" loading="lazy" style="object-position:50% 62%">
+        <img src="img/lh_zimmer.webp" alt="Zimmer der Luisenhöhe mit SAMINA Bett" loading="lazy">
+        <img src="img/lh_kueche.webp" alt="Küche der Luisenhöhe, ausgezeichnet mit zwei MICHELIN Keys" loading="lazy">
+        <span class="chip tag">Fallstudie</span>
+        <div class="dots" role="tablist"></div>
+      </figure>
+      <div>
+        <p class="eyebrow rv">Luisenhöhe Gesundheitsresort · Schwarzwald</p>
+        <h2 class="rv d2" style="font-size:var(--t-42);line-height:1.05">Wenn Schlaf zur Vision eines Hotels wird.</h2>
+        <p class="lead rv d3" style="margin-top:var(--f3)">Das renommierte Gesundheitsresort bei Freiburg integriert das SAMINA Schlafsystem als zentrales Element seines ganzheitlichen GesundKunft®-Konzepts.</p>
+        <blockquote class="rv d3">Schlaf und Regeneration sind zentrale Säulen unserer Philosophie – und wir müssen sie ganz klar in der Tiefe bedienen. Deshalb kam für uns nur ein Partner infrage: SAMINA.</blockquote>
+        <p class="who rv d4"><b>Rüdiger Wörnle</b> · Geschäftsführender Gesellschafter, Luisenhöhe</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="rv"><b>2 MICHELIN Keys</b>ausgezeichnet für einen außergewöhnlichen Aufenthalt</div>
+      <div class="rv d2"><b>Längere Aufenthalte</b>deutlich längere Aufenthaltsdauer der Gäste</div>
+      <div class="rv d3"><b>Mehr Empfehlungen</b>höhere Gästezufriedenheit und Weiterempfehlungsraten</div>
+      <div class="rv d4"><b>Sichtbar anders</b>Schlaf als buchbares Erlebnis, Differenzierung im Premium-Segment</div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · INITIATIVE / PARTNERSCHAFT -->
+<section class="sec part" id="partner">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow rv">Ihre Rolle</p>
+        <h2 class="rv d2">Werden Sie Teil des Trends zum regenerativen Schlaf.</h2>
+      </div>
+      <p class="lead rv d3">Regenerativer Schlaf ist das Thema, über das Gäste sprechen. Als SAMINA Partnerhotel sind Sie Teil dieses Trends. Und in Ihrer Region das Haus, an dem man beim Thema Longevity nicht vorbeikommt.</p>
+    </div>
+    <div class="bens">
+      <div class="rv"><span class="n">01</span><h3>Das Longevity-Zimmer</h3><p>Bett- und Schlafsystem nach dem Konzept POWER SLEEPING ROOMS®, geplant für Ihr Haus und Ihre Gäste.</p></div>
+      <div class="rv d2"><span class="n">02</span><h3>Das Netzwerk</h3><p>Kostenlose Mitgliedschaft in der „Gesund Schlafen Hotelgruppe“ mit ihrem internationalen Netzwerk.</p></div>
+      <div class="rv d3"><span class="n">03</span><h3>Die Geschichte</h3><p>Schlaf ist eine Geschichte, die Gäste weitererzählen. Wir liefern Bilder und Texte, mit denen Sie Ihr Schlafkonzept zeigen: im Zimmer, auf Ihrer Website, in Ihren Kanälen.</p></div>
+      <div class="rv d4"><span class="n">04</span><h3>Die Sichtbarkeit</h3><p>Als Partnerhotel auf <a href="https://samina.travel/" target="_blank" rel="noopener" style="color:var(--room)">samina.travel</a> gelistet, der Reiseplattform, auf der SAMINA Schläfer ihr nächstes Urlaubsziel finden.</p></div>
+    </div>
+    <div class="steps">
+      <div>
+        <p class="eyebrow rv">So beginnt es</p>
+        <h3 class="rv d2" style="font-size:var(--t-42);font-weight:300">Drei Schritte zum Upgrade.</h3>
+      </div>
+      <ol>
+        <li class="rv"><div><b>Das Gespräch</b><span>30 Minuten, persönlich oder per Video. Wir hören zu: Haus, Gäste, Ziele.</span></div></li>
+        <li class="rv d2"><div><b>Probe liegen</b><span>In unserer Manufaktur in Frastanz oder in einer SAMINA Filiale. Am besten schlafen Sie selbst eine Nacht darauf.</span></div></li>
+        <li class="rv d3"><div><b>Ihr Konzept</b><span>Vom ersten Zimmer bis zum ganzen Haus. Sie entscheiden das Tempo.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · FAQ -->
+<section class="sec faq bg-stone" id="faq">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Gut zu wissen</p>
+      <h2 class="rv d2" style="font-size:var(--t-42);line-height:1.05">Was Hoteliers uns fragen.</h2>
+    </div>
+    <div class="rv d2">
+      <details><summary>Merken Gäste die Schräglage?</summary><p>Bei 3,5° liegt das Kopfende eines 2 m langen Betts rund 12 cm höher. Viele Gäste bemerken die Neigung in der Nacht nicht. Wer es lieber flach mag: Am Adriano lässt sich die Neigung jederzeit zurückstellen.</p></details>
+      <details><summary>Muss ich das ganze Haus umrüsten?</summary><p>Nein. Sie können mit einzelnen Zimmern oder einer Zimmerkategorie beginnen und Schritt für Schritt erweitern. Was zu Ihrem Haus passt, besprechen wir im ersten Gespräch.</p></details>
+      <details><summary>Woraus besteht das System?</summary><p>Aus fünf Schichten: freischwingender Lamellenrost, Naturkautschukmatratze, Lokosana Erdungsauflage, Schafschurwollauflage sowie Decken und Kissen. Optional der Bettrahmen Adriano mit SAMINA GRAVITAS® für die Schräglage. Alles aus Naturmaterialien, handgefertigt in Vorarlberg.</p></details>
+      <details><summary>Wie entsteht Ihr Angebot?</summary><p>Jedes SAMINA Zimmer ist ein individuelles Angebot. Wir fertigen auch in Sondermaßen, und die Systemkonfiguration richtet sich nach Ihrem Haus, zum Beispiel mit oder ohne Körpererdung. Was genau zu Ihnen passt, ermitteln wir gemeinsam im Gespräch.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · KONTAKT -->
+<section class="sec kon" id="kontakt">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Ihr nächster Schritt</p>
+      <h2 class="rv d2">Nutzen Sie den Trend zu Longevity und Schlaf.</h2>
+      <p class="lead rv d3" style="margin-top:var(--f3)">Sprechen wir darüber, wie Ihr Haus beim Thema Longevity und Schlaf vorne steht. Persönlich, unverbindlich, in 30 Minuten.</p>
+    </div>
+    <div>
+      <div class="cards rv d2" id="cards" aria-live="polite"></div>
+      <div class="switch rv d3"><div class="who" id="who" role="group" aria-label="Ansprechpartner wählen"></div><div class="nav"><button type="button" id="prev" aria-label="Vorheriger Ansprechpartner">←</button><button type="button" id="next" aria-label="Nächster Ansprechpartner">→</button></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 11 · SCHLUSS -->
+<section class="end" id="ende">
+  <img src="img/natur_bett_wald.jpg" alt="" loading="lazy">
+  <div class="endin">
+    <div class="txt">
+      <p class="eyebrow rv">Ihr Upgrade mit SAMINA</p>
+      <p class="claim rv d2" translate="no" lang="en">Sleep <span class="caps">SAMINA</span>.<br>Design your Longevity</p>
+      <p class="url rv d3"><a href="https://samina.com/">more on samina.com</a></p>
+      <a class="btn rv d3" href="#kontakt">Vorreiter werden <span class="arr">→</span></a>
+    </div>
+    <div class="vlock rv d4"><span class="d" translate="no" lang="en">Natural Sleep<span class="u">Concept</span></span><img src="img/logo-vertikal.svg" alt="SAMINA"></div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 SAMINA Produktions- u. Handels GmbH · Obere Lände 7, 6820 Frastanz, Österreich</span>
+    <nav aria-label="Rechtliches">
+      <a href="https://samina.com/impressum/">Impressum</a>
+      <a href="https://samina.com/datenschutz/">Datenschutz</a>
+      <a href="https://samina.com/allgemeine-geschaeftsbedingungen/">AGB</a>
+      <a href="https://samina.com/">samina.com</a>
+    </nav>
+    <span class="nocookie">Diese Seite setzt keine Cookies und erfasst keine Nutzungsdaten.</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a class="btn" href="#kontakt">Vorreiter werden <span class="arr">→</span></a></div>
+
+<script>
+(function(){
+"use strict";
+const $ = id => document.getElementById(id);
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ── Ansprechpartner. Link-Parameter ?von=philipp|daniel|mathias ──
+   Wird nur im Browser ausgewertet, nichts wird gespeichert oder gesendet. */
+const TEAM = {
+  philipp:{n:"Philipp Amann", f:"Inhaber & Geschäftsführer SAMINA", img:"img/philipp.webp", tel:"+43 664 391 1740", mail:"philipp.amann@samina.com", ph:false},
+  daniel: {n:"Daniel Lederle", f:"Vertrieb & Partnermanagement SAMINA", img:"img/daniel.webp", tel:"+43 676 60 60 281", mail:"daniel.lederle@samina.com", ph:false},
+  mathias:{n:"Mathias Baur", f:"Vertrieb · SAMINA Dornbirn", img:"img/dornbirn.webp", tel:"+43 676 60 60 454", mail:"mathias.baur@samina.com", ph:false}
+};
+const ALIAS = {matthias:"mathias", baur:"mathias", lederle:"daniel", amann:"philipp"};
+const q = new URLSearchParams(location.search);
+let von = (q.get("von")||"").toLowerCase().trim(); von = ALIAS[von] || von;
+const el = (t,c,txt) => { const e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; };
+const telHref = t => "tel:" + t.replace(/[^\d+]/g,"");
+const SUBJ = encodeURIComponent("Ihr Upgrade mit SAMINA");
+
+function card(key){
+  const p = TEAM[key], c = el("article","card");
+  if (p.img){ const i=el("img"); i.src=p.img; i.alt=p.n; i.loading="lazy"; c.append(i); }
+  else c.append(el("div","ph-img", p.n.split(" ").map(s=>s[0]).join("")));
+  const b = el("div","b");
+  b.append(el("div","nm",p.n), el("div","fn",p.f));
+  const t = el("a","l"); t.href=telHref(p.tel); t.textContent="☎ "+p.tel;
+  const m = el("a","l"); m.href="mailto:"+p.mail+"?subject="+SUBJ; m.textContent="✉ "+p.mail;
+  b.append(t,m);
+  if (p.ph){ const n=el("span","ph","[Foto ergänzen]"); n.style.fontSize="12px"; n.style.width="max-content"; b.append(n); }
+  const a = el("div","act");
+  const bm = el("a","btn"); bm.href=m.href; bm.innerHTML='E-Mail schreiben <span class="arr">→</span>';
+  // Fallback, falls kein Mailprogramm eingerichtet ist: Adresse zusätzlich kopieren
+  bm.addEventListener("click",()=>{ let left=false; const off=()=>{left=true;}; addEventListener("blur",off,{once:true}); document.addEventListener("visibilitychange",off,{once:true});
+    setTimeout(()=>{ if(!left && document.hasFocus()){ try{ navigator.clipboard.writeText(p.mail).then(()=>toast("Kein Mailprogramm gefunden – Adresse kopiert: "+p.mail)); }catch(e){} } },1200); });
+  const wa = el("a","btn wa"); wa.href="https://wa.me/"+p.tel.replace(/[^\d]/g,"")+"?text="+encodeURIComponent("Guten Tag Herr "+p.n.split(" ").slice(-1)[0]+", ich interessiere mich für SAMINA in unserem Hotel."); wa.target="_blank"; wa.rel="noopener"; wa.innerHTML='<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg> WhatsApp';
+  const bv = el("button","btn line"); bv.type="button"; bv.textContent="Kontakt speichern"; bv.onclick=()=>vcard(p);
+  const web = el("div","web"); const subj=encodeURIComponent("Ihr Upgrade mit SAMINA");
+  const g = el("a",null,"in Gmail"); g.href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(p.mail)+"&su="+subj; g.target="_blank"; g.rel="noopener";
+  const o = el("a",null,"in Outlook Web"); o.href="https://outlook.office.com/mail/deeplink/compose?to="+encodeURIComponent(p.mail)+"&subject="+subj; o.target="_blank"; o.rel="noopener";
+  web.append("E-Mail öffnen ", g, " · ", o);
+  a.append(bm,wa,bv); b.append(a,web); c.append(b);
+  return c;
+}
+function toast(msg){ let t=document.getElementById("toast"); if(!t){ t=el("div"); t.id="toast"; t.setAttribute("role","status"); document.body.append(t); } t.textContent=msg; t.classList.add("on"); clearTimeout(toast.h); toast.h=setTimeout(()=>t.classList.remove("on"),3200); }
+function vcard(p){
+  const v = ["BEGIN:VCARD","VERSION:3.0","N:"+p.n.split(" ").reverse().join(";"),"FN:"+p.n,"ORG:SAMINA Produktions- u. Handels GmbH","TITLE:"+p.f,"TEL;TYPE=WORK:"+p.tel,"EMAIL;TYPE=WORK:"+p.mail,"URL:https://samina.com","END:VCARD"].join("\r\n");
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([v],{type:"text/vcard"})); a.download = p.n.replace(/\s+/g,"_")+".vcf"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+}
+const cards = $("cards"), who = $("who"), ORDER = ["philipp","daniel","mathias"];
+let idx = Math.max(0, ORDER.indexOf(von));
+function show(k){ idx=(k+ORDER.length)%ORDER.length; cards.innerHTML=""; cards.append(card(ORDER[idx])); [...who.children].forEach((b,n)=>b.setAttribute("aria-pressed", n===idx)); }
+ORDER.forEach((k,n)=>{ const b=el("button",null,TEAM[k].n); b.type="button"; b.onclick=()=>show(n); who.append(b); });
+$("prev").onclick=()=>show(idx-1); $("next").onclick=()=>show(idx+1);
+show(idx);
+
+/* ── Laufband: Partnerhotels + bekannte SAMINA Schläfer (Wall of Fame samina.com) ── */
+const HOTELS = [
+  ["h_krallerhof","Krallerhof","Leogang · Salzburg · AT"],
+  ["h_luisenhoehe_luft","Luisenhöhe Gesundheitsresort","Schwarzwald · DE","50% 62%"],
+  ["h_peterhof","Peterhof Chalets","Furx · Vorarlberg · AT"],
+  ["h_gitschberg","BIOHOTEL Gitschberg","Meransen · Südtirol · IT"],
+  ["h_posthotel","Posthotel Alexander Herrmann","Wirsberg · Bayern · DE"],
+  ["h_fuchsegg","Fuchsegg Eco Lodge","Egg · Vorarlberg · AT"],
+  ["h_resilia","Gästehaus MY RESILIA","Obermarchtal · DE"],
+  ["h_clinicum","Clinicum Alpinum","Gaflei · Liechtenstein"]
+];
+const PEOPLE = [{"f": "p18.webp", "n": "Dr. Martin Schlott", "r": "Chefarzt & Schlafcoach", "hi": true}, {"f": "p02.webp", "n": "Alexander Herrmann", "r": "Sternekoch, Hotelier & Autor", "hi": true}, {"f": "p00.webp", "n": "Katharina Liensberger", "r": "Profi-Skirennläuferin", "hi": false}, {"f": "p01.webp", "n": "Ben Greenfield", "r": "Biohacker & Autor", "hi": false}, {"f": "p03.webp", "n": "Svenja Huth", "r": "Profi-Fussballerin", "hi": false}, {"f": "p04.webp", "n": "Teemu Arina", "r": "Biohacker, Autor & Gründer Biohacker Summit", "hi": false}, {"f": "p05.webp", "n": "Birgit Schrowange", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p06.webp", "n": "Panagiota Petridou", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p07.webp", "n": "Magdalena Egger", "r": "Profi-Skirennläuferin", "hi": false}, {"f": "p08.webp", "n": "Markus Linder", "r": "Kabarettist, Moderator, Schauspieler & Musiker", "hi": false}, {"f": "p09.webp", "n": "Birgit von Bentzel", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p10.webp", "n": "Simon Amann", "r": "Profi-Skispringer", "hi": false}, {"f": "p11.webp", "n": "Detlef Steves", "r": "ehem. Gastronom, Reality-TV-Star", "hi": false}, {"f": "p12.webp", "n": "Andreas Breitfeld", "r": "Biohacker & Autor", "hi": false}, {"f": "p13.webp", "n": "Giulia Steingruber", "r": "ehem. Kunstturnerin", "hi": false}, {"f": "p14.webp", "n": "Max Gotzler", "r": "Biohacker & Autor", "hi": false}, {"f": "p15.webp", "n": "Motsi Mabuse", "r": "Tänzerin & Tanztrainerin", "hi": false}, {"f": "p16.webp", "n": "Ross Anthony", "r": "TV-Moderator, Musiker & Entertainer", "hi": false}, {"f": "p17.webp", "n": "Anna Funck", "r": "Journalistin, Moderatorin & Autorin", "hi": false}];
+function fill(track, items, make){ const frag=document.createDocumentFragment(); [0,1].forEach(r=>items.forEach(it=>{const n=make(it); if(r) n.setAttribute("aria-hidden","true"); frag.append(n);})); track.append(frag); }
+fill($("hotels"), HOTELS, h => { const c=el("figure","hcard"); c.style.margin="0"; const i=el("img"); i.src="img/"+h[0]+".webp"; i.alt=h[1]+", SAMINA Partnerhotel"; i.loading="lazy"; if(h[3]) i.style.objectPosition=h[3]; const d=el("figcaption"); d.append(el("b",null,h[1]),el("span",null,h[2])); c.append(i,d); return c; });
+fill($("people"), PEOPLE, p => { const c=el("div","pcard"+(p.hi?" hi":"")); const i=el("img"); i.src="img/wof/"+p.f; i.alt=p.n; i.loading="lazy"; const d=el("div"); d.append(el("b",null,p.n),el("span",null,p.r)); c.append(i,d); return c; });
+
+/* ── Header, Mobile-Leiste ── */
+const head=$("shead"), mbar=$("mbar");
+function onScroll(){ const y=scrollY; head.classList.toggle("solid", y>40); const k=$("kontakt").getBoundingClientRect().top; mbar.classList.toggle("on", y>innerHeight*.8 && k>innerHeight); }
+addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+/* ── Reveal ── */
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }),{threshold:.15, rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv, .wave, .ninety").forEach(n=>io.observe(n));
+
+
+/* ── Fünf Schichten: Hotspots und Liste synchron ── */
+const hs=[...document.querySelectorAll("#explode .hs")], lis=[...document.querySelectorAll("#layers li")];
+function pick(n){ lis.forEach((l,i)=>l.classList.toggle("on",i===n)); hs.forEach((h,i)=>h.setAttribute("aria-pressed",i===n)); }
+hs.forEach((h,i)=>h.addEventListener("click",()=>pick(i))); lis.forEach((l,i)=>l.querySelector("button").addEventListener("click",()=>pick(i)));
+
+/* ── Fallstudie Luisenhöhe: Bilder überblenden (pausiert bei Hover, außer Sicht und bei reduzierter Bewegung) ── */
+(function(){ const box=$("lhshow"); if(!box) return; const imgs=[...box.querySelectorAll("img")], dots=box.querySelector(".dots"); let i=0, timer=0, seen=false;
+  imgs.forEach((_,n)=>{ const b=el("button"); b.type="button"; b.setAttribute("role","tab"); b.setAttribute("aria-label","Bild "+(n+1)); b.onclick=()=>{go(n); restart();}; dots.append(b); });
+  function go(n){ i=(n+imgs.length)%imgs.length; imgs.forEach((im,k)=>im.classList.toggle("on",k===i)); [...dots.children].forEach((d,k)=>d.setAttribute("aria-selected",k===i)); }
+  function restart(){ clearInterval(timer); if(!reduce && seen) timer=setInterval(()=>go(i+1),4200); }
+  box.addEventListener("mouseenter",()=>clearInterval(timer)); box.addEventListener("mouseleave",restart);
+  new IntersectionObserver(es=>{ seen=es[0].isIntersecting; restart(); },{threshold:.3}).observe(box);
+  go(0); })();
+
+/* ── Zahlen zählen hoch, sobald sichtbar ── */
+const cio = new IntersectionObserver(es=>es.forEach(e=>{ if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const n=e.target, to=parseFloat(n.dataset.count), dec=+(n.dataset.dec||0), t0=performance.now(), D=1600;
+  const f=x=>x.toFixed(dec).replace(".",",");
+  if (reduce){ n.textContent=f(to); return; }
+  (function step(now){ const k=Math.min(1,(now-t0)/D), v=to*(1-Math.pow(1-k,3)); n.textContent=f(v); if(k<1) requestAnimationFrame(step); else n.closest(".hud")?.classList.add("hit"); })(t0);
+}),{threshold:.6});
+document.querySelectorAll("[data-count]").forEach(n=>{ n.textContent=(0).toFixed(+(n.dataset.dec||0)).replace(".",","); cio.observe(n); });
+
+/* ── Statement: Logo-Animation per Scroll (Bildsequenz aus „Logo Animation.mp4“, 76 Bilder) ── */
+const LN=76, lf=[], lcv=$("lcv"), lctx=lcv.getContext("2d"), st=$("statement"), stmt=$("stmt");
+let lcur=1, LW=0, LH=0, lstarted=false;
+function lload(){ if(lstarted) return; lstarted=true; for(let i=1;i<=LN;i++){ const im=new Image(); im.decoding="async"; im.src="logoframes/l"+String(i).padStart(3,"0")+".webp"; im.onload=()=>{ if(i===Math.round(lcur)) ldraw(lcur); }; lf[i]=im; } }
+new IntersectionObserver(es=>{ if(es[0].isIntersecting) lload(); },{rootMargin:"150% 0px"}).observe(st);
+function lsize(){ const d=Math.min(devicePixelRatio||1,1.5); LW=lcv.clientWidth; LH=lcv.clientHeight; lcv.width=Math.round(LW*d); lcv.height=Math.round(LH*d); lctx.setTransform(d,0,0,d,0,0); ldraw(lcur); }
+function ldraw(f){ let i=Math.round(f), im=lf[i]; for(let k=1;k<LN && !(im&&im.complete&&im.naturalWidth);k++) im=lf[i-k]||lf[i+k];
+  if(!(im&&im.complete&&im.naturalWidth)) return; const nw=im.naturalWidth, nh=im.naturalHeight, s=Math.max(LW/nw, LH/nh), w=nw*s, h=nh*s;
+  const fade0 = (LW/LH < 1) ? 1 - Math.min(1, Math.max(0, (f-2.5)/5.5)) : 0;
+  if (fade0 > 0){ lctx.drawImage(im,0,0,nw*.1,nh,0,0,LW,LH); }            // logofreier Bokeh-Rand als Hintergrund
+  lctx.globalAlpha = 1 - fade0; lctx.drawImage(im,(LW-w)/2,(LH-h)/2,w,h); lctx.globalAlpha = 1;
+  // Hochformat: Logo komplett zeigen – Bild zusätzlich in voller Breite darüber (unscharfer Hintergrund verdeckt die Kante)
+  const fade = 1 - Math.min(1, Math.max(0, (f-2.5)/5.5));
+  if (LW/LH < 1 && fade > 0){
+    const s2=LW/nw*1.12, w2=nw*s2, h2=nh*s2, oc=ldraw.oc||(ldraw.oc=document.createElement("canvas")), ox=oc.getContext("2d");
+    oc.width=Math.round(w2); oc.height=Math.round(h2); ox.globalCompositeOperation="source-over"; ox.drawImage(im,0,0,oc.width,oc.height);
+    const g=ox.createLinearGradient(0,0,0,oc.height); g.addColorStop(0,"rgba(0,0,0,0)"); g.addColorStop(.3,"#000"); g.addColorStop(.7,"#000"); g.addColorStop(1,"rgba(0,0,0,0)");
+    ox.globalCompositeOperation="destination-in"; ox.fillStyle=g; ox.fillRect(0,0,oc.width,oc.height);
+    lctx.globalAlpha=fade; lctx.drawImage(oc,(LW-w2)/2,(LH-h2)/2,w2,h2); lctx.globalAlpha=1;
+  } }
+function lrender(){ const r=st.getBoundingClientRect(), p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));
+  lcur=1+(LN-1)*Math.min(1,p/.5); ldraw(lcur);
+  const q=Math.min(1,Math.max(0,(p-.24)/.14)); stmt.style.opacity=q; stmt.style.transform="translateY("+(21*(1-q)).toFixed(1)+"px)"; }
+if(!reduce){ let lr=0; addEventListener("scroll",()=>{ if(!lr) lr=requestAnimationFrame(()=>{lr=0; lrender();}); },{passive:true}); addEventListener("resize",()=>{ lsize(); lrender(); }); lsize(); lrender(); }
+})();
+</script>
+</body>
+</html>
