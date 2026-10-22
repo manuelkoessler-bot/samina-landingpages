@@ -422,11 +422,6 @@ h3{font-size:var(--t-26);line-height:1.15}
 .foot a:hover{color:#fff}
 .foot .nocookie{width:100%;color:rgba(234,243,230,.6);font-size:12px}
 
-/* Mobile CTA-Leiste */
-.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;padding:var(--f1) var(--c) calc(var(--f1) + env(safe-area-inset-bottom,0px));background:rgba(11,36,24,.96);transform:translateY(110%);transition:transform .35s}
-.mbar.on{transform:none}
-.mbar .btn{width:100%;justify-content:center}
-@media (max-width:860px){.mbar{display:block}.foot .wrap{padding-bottom:calc(var(--f6) + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body>
@@ -776,7 +771,6 @@ h3{font-size:var(--t-26);line-height:1.15}
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><a class="btn" href="#kontakt">Kontakt aufnehmen <span class="arr">→</span></a></div>
 
 <script>
 (function(){
@@ -853,9 +847,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",
   scrollTo({top:y, behavior: reduce?"auto":"smooth"}); history.replaceState(null,"","#"+id);
 }));
 
-/* ── Header, Mobile-Leiste ── */
-const head=$("shead"), mbar=$("mbar");
-function onScroll(){ const y=scrollY; head.classList.toggle("solid", y>40); const k=$("kontakt").getBoundingClientRect().top; mbar.classList.toggle("on", y>innerHeight*.8 && k>innerHeight); }
+/* ── Header ── */
+const head=$("shead");
+function onScroll(){ const y=scrollY; head.classList.toggle("solid", y>40); }
 addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
 /* ── Reveal ── */
