@@ -152,8 +152,8 @@ h3{font-size:var(--t-26);line-height:1.15}
 .wave .s3 p{color:rgba(255,255,255,.9);font-size:16px;max-width:40ch}
 @media (prefers-reduced-motion:reduce){.wave .st,.wave .st>*{transform:none;opacity:1;transition:none}}
 /* Statement: Logo-Animation per Scroll (einziger Scroll-Effekt), endet weiß, dann erscheint das Statement */
-.statement{background:#fff;height:170svh}
-@media (max-width:860px){.statement{height:145svh}}
+.statement{background:#fff;height:230svh}
+@media (max-width:860px){.statement{height:200svh}}
 .statement .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center;text-align:center}
 .statement canvas{position:absolute;inset:0;width:100%;height:100%}
 .statement .wrap{position:relative;z-index:1;opacity:0;transform:translateY(21px);transition:opacity .2s linear}
@@ -902,8 +902,8 @@ function ldraw(f){ let i=Math.round(f), im=lf[i]; for(let k=1;k<LN && !(im&&im.c
     lctx.globalAlpha=fade; lctx.drawImage(oc,(LW-w2)/2,(LH-h2)/2,w2,h2); lctx.globalAlpha=1;
   } }
 function lrender(){ const r=st.getBoundingClientRect(), p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));
-  lcur=1+(LN-1)*Math.min(1,p/.6); ldraw(lcur);
-  const q=Math.min(1,Math.max(0,(p-.32)/.18)); stmt.style.opacity=q; stmt.style.transform="translateY("+(21*(1-q)).toFixed(1)+"px)"; }
+  lcur=1+(LN-1)*Math.min(1,p/.7); ldraw(lcur);
+  const q=Math.min(1,Math.max(0,(p-.6)/.16)); stmt.style.opacity=q; stmt.style.transform="translateY("+(21*(1-q)).toFixed(1)+"px)"; }
 if(!reduce){ let lr=0; addEventListener("scroll",()=>{ if(!lr) lr=requestAnimationFrame(()=>{lr=0; lrender();}); },{passive:true}); addEventListener("resize",()=>{ lsize(); lrender(); }); lsize(); lrender(); }
 })();
 </script>
