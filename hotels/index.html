@@ -784,16 +784,12 @@ h3{font-size:var(--t-26);line-height:1.15}
 const $ = id => document.getElementById(id);
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ── Ansprechpartner. Link-Parameter ?von=philipp|daniel|mathias ──
-   Wird nur im Browser ausgewertet, nichts wird gespeichert oder gesendet. */
+/* ── Ansprechpartner: eine Karte, durchklickbar ── */
 const TEAM = {
   philipp:{n:"Philipp Amann", f:"Inhaber & Geschäftsführer SAMINA", img:"img/philipp.webp", tel:"+43 664 391 1740", mail:"philipp.amann@samina.com", ph:false},
   daniel: {n:"Daniel Lederle", f:"Vertrieb & Partnermanagement SAMINA", img:"img/daniel.webp", tel:"+43 676 60 60 281", mail:"daniel.lederle@samina.com", ph:false},
   mathias:{n:"Mathias Baur", f:"Vertrieb · SAMINA Dornbirn", img:"img/dornbirn.webp", tel:"+43 676 60 60 454", mail:"mathias.baur@samina.com", ph:false}
 };
-const ALIAS = {matthias:"mathias", baur:"mathias", lederle:"daniel", amann:"philipp"};
-const q = new URLSearchParams(location.search);
-let von = (q.get("von")||"").toLowerCase().trim(); von = ALIAS[von] || von;
 const el = (t,c,txt) => { const e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; };
 const telHref = t => "tel:" + t.replace(/[^\d+]/g,"");
 const SUBJ = encodeURIComponent("Ihr Upgrade mit SAMINA");
@@ -828,7 +824,7 @@ function vcard(p){
   const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([v],{type:"text/vcard"})); a.download = p.n.replace(/\s+/g,"_")+".vcf"; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000);
 }
 const cards = $("cards"), who = $("who"), ORDER = ["philipp","daniel","mathias"];
-let idx = Math.max(0, ORDER.indexOf(von));
+let idx = 0;
 function show(k){ idx=(k+ORDER.length)%ORDER.length; cards.innerHTML=""; cards.append(card(ORDER[idx])); [...who.children].forEach((b,n)=>b.setAttribute("aria-pressed", n===idx)); }
 ORDER.forEach((k,n)=>{ const b=el("button",null,TEAM[k].n); b.type="button"; b.onclick=()=>show(n); who.append(b); });
 $("prev").onclick=()=>show(idx-1); $("next").onclick=()=>show(idx+1);
