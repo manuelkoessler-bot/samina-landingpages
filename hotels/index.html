@@ -49,9 +49,9 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;scroll-padding-top:var(--hh)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 p{margin:0}
@@ -450,9 +450,9 @@ h3{font-size:var(--t-26);line-height:1.15}
     <div class="cb">
       <p class="eyebrow rv">SAMINA für Hotels</p>
       <h1 class="rv d2">Ihr Upgrade<br>mit <span class="caps">SAMINA</span>.</h1>
-      <p class="sub rv d3">Longevity ist in aller Munde, und sie beginnt im Schlaf. Mit dem Bett- und Schlafsystem von SAMINA bieten Sie Ihren Gästen, wonach sie gerade suchen. Und Sie positionieren sich dort, wo alle hinwollen: ganz vorne.</p>
+      <p class="sub rv d3">Longevity ist in aller Munde, und sie beginnt im Schlaf. Mit dem Bett- und Schlafsystem von SAMINA bieten Sie Ihren Gästen, wonach sie gerade suchen. Nutzen Sie den Trend zu Longevity und regenerativem Schlaf für Ihr Haus.</p>
       <div class="ctas rv d3">
-        <a class="btn" href="#kontakt">Vorreiter werden <span class="arr">→</span></a>
+        <a class="btn" href="#kontakt">Kontakt aufnehmen <span class="arr">→</span></a>
         <a class="btn ghost" href="#welle">Warum jetzt</a>
       </div>
     </div>
@@ -739,7 +739,7 @@ h3{font-size:var(--t-26);line-height:1.15}
     <div>
       <p class="eyebrow rv">Ihr nächster Schritt</p>
       <h2 class="rv d2">Nutzen Sie den Trend zu Longevity und Schlaf.</h2>
-      <p class="lead rv d3" style="margin-top:var(--f3)">Sprechen wir darüber, wie Ihr Haus beim Thema Longevity und Schlaf vorne steht. Persönlich, unverbindlich, in 30 Minuten.</p>
+      <p class="lead rv d3" style="margin-top:var(--f3)">Sprechen wir darüber, wie Ihr Haus den Trend zu Longevity und Schlaf für sich nutzt. Persönlich, unverbindlich, in 30 Minuten.</p>
     </div>
     <div>
       <div class="cards rv d2" id="cards" aria-live="polite"></div>
@@ -758,7 +758,7 @@ h3{font-size:var(--t-26);line-height:1.15}
       <p class="eyebrow rv">Ihr Upgrade mit SAMINA</p>
       <p class="claim rv d2" translate="no" lang="en">Sleep <span class="caps">SAMINA</span>.<br>Design your Longevity</p>
       <p class="url rv d3"><a href="https://samina.com/">more on samina.com</a></p>
-      <a class="btn rv d3" href="#kontakt">Vorreiter werden <span class="arr">→</span></a>
+      <a class="btn rv d3" href="#kontakt">Kontakt aufnehmen <span class="arr">→</span></a>
     </div>
     <div class="vlock rv d4"><span class="d" translate="no" lang="en">Natural Sleep<span class="u">Concept</span></span><img src="img/logo-vertikal.svg" alt="SAMINA"></div>
   </div>
@@ -776,7 +776,7 @@ h3{font-size:var(--t-26);line-height:1.15}
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><a class="btn" href="#kontakt">Vorreiter werden <span class="arr">→</span></a></div>
+<div class="mbar" id="mbar"><a class="btn" href="#kontakt">Kontakt aufnehmen <span class="arr">→</span></a></div>
 
 <script>
 (function(){
@@ -845,6 +845,13 @@ const PEOPLE = [{"f": "p18.webp", "n": "Dr. Martin Schlott", "r": "Chefarzt & Sc
 function fill(track, items, make){ const frag=document.createDocumentFragment(); [0,1].forEach(r=>items.forEach(it=>{const n=make(it); if(r) n.setAttribute("aria-hidden","true"); frag.append(n);})); track.append(frag); }
 fill($("hotels"), HOTELS, h => { const c=el("figure","hcard"); c.style.margin="0"; const i=el("img"); i.src="img/"+h[0]+".webp"; i.alt=h[1]+", SAMINA Partnerhotel"; i.loading="lazy"; if(h[3]) i.style.objectPosition=h[3]; const d=el("figcaption"); d.append(el("b",null,h[1]),el("span",null,h[2])); c.append(i,d); return c; });
 fill($("people"), PEOPLE, p => { const c=el("div","pcard"+(p.hi?" hi":"")); const i=el("img"); i.src="img/wof/"+p.f; i.alt=p.n; i.loading="lazy"; const d=el("div"); d.append(el("b",null,p.n),el("span",null,p.r)); c.append(i,d); return c; });
+
+/* ── Sprunglinks per JS (zuverlässig auf iOS Safari, Offset für fixen Header) ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{
+  const id=a.getAttribute("href").slice(1), tgt=id && document.getElementById(id); if(!tgt) return;
+  e.preventDefault(); const y=tgt.getBoundingClientRect().top+scrollY-(head.offsetHeight||0);
+  scrollTo({top:y, behavior: reduce?"auto":"smooth"}); history.replaceState(null,"","#"+id);
+}));
 
 /* ── Header, Mobile-Leiste ── */
 const head=$("shead"), mbar=$("mbar");
