@@ -194,11 +194,11 @@ h3{font-size:var(--t-26);line-height:1.15}
 .portrait figcaption{position:absolute;left:var(--f4);right:38.2%;bottom:var(--f4);color:#fff}
 .portrait figcaption b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,32px);line-height:1.12}
 .portrait figcaption span{display:block;margin-top:var(--f1);font-size:13px;color:rgba(255,255,255,.88)}
-.badge{position:absolute;right:calc(-1 * var(--f4));bottom:calc(-1 * var(--f4));width:clamp(130px,11.8vw,170px);aspect-ratio:1;border-radius:50%;background:var(--samina);color:#fff;display:grid;place-items:center;text-align:center;padding:var(--f3);font:700 11px/1.35 var(--sans);letter-spacing:.06em;text-transform:uppercase;box-shadow:0 13px 34px rgba(11,36,24,.22)}
+.badge{position:absolute;right:calc(-1 * var(--f4));bottom:calc(-1 * var(--f4));--bd:clamp(130px,11.8vw,170px);width:var(--bd);height:var(--bd);flex:none;box-sizing:border-box;overflow:hidden;border-radius:50%;background:var(--samina);color:#fff;display:grid;place-items:center;text-align:center;padding:var(--f3);font:700 11px/1.35 var(--sans);letter-spacing:.06em;text-transform:uppercase;box-shadow:0 13px 34px rgba(11,36,24,.22)}
 .badge em{display:block;font-style:normal;font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:.02em;text-transform:none;margin:3px 0}
 .prof .txt{display:flex;flex-direction:column;justify-content:center;padding-block:var(--f4)}
 .prof .lead+.lead{margin-top:var(--f3)}
-@media (max-width:860px){.prof{grid-template-columns:1fr;gap:var(--f5)}.portrait{min-height:0;aspect-ratio:4/5}.badge{right:var(--f2);bottom:calc(-1 * var(--f3));width:118px}.portrait figcaption{right:var(--f6)}}
+@media (max-width:860px){.prof{grid-template-columns:1fr;gap:var(--f5)}.portrait{min-height:0;aspect-ratio:4/5}.badge{--bd:112px;top:var(--f3);right:var(--f3);bottom:auto;padding:var(--f2);font-size:9px;letter-spacing:.04em}.badge em{font-size:16px;margin:2px 0}.portrait figcaption{left:var(--f3);right:var(--f3);bottom:var(--f3)}.portrait figcaption b{font-size:24px}.portrait figcaption span{font-size:12px}}
 
 /* ---------- Dreiklang (Green-Room-Moment) ---------- */
 .trio-sec{background:var(--forest) url(img/wald_bokeh_tief.jpg) center/cover;color:#fff}
