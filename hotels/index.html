@@ -216,7 +216,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 .trio h3{font-size:var(--t-42);font-weight:300;margin:var(--f1) 0 var(--f2)}
 .trio .hl{font-weight:700;font-size:15px;line-height:1.45;margin-bottom:var(--f2)}
 .trio p{font-size:15px;line-height:1.55;color:rgba(255,255,255,.88)}
-@media (max-width:960px){.trio{grid-template-columns:1fr}.trio-sec .head{grid-template-columns:1fr;gap:var(--f3)}.trio article{min-height:440px}}
+@media (max-width:960px){.trio{grid-template-columns:1fr}.trio-sec .head{grid-template-columns:1fr;gap:var(--f3)}.trio article{min-height:440px}.trio article:nth-child(2){min-height:610px}}
 
 /* ---------- Fünf Schichten (wie Schrägbett-Seite): Hotspots + Liste ---------- */
 .layers-sec .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
@@ -244,7 +244,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 .sys .mass a{color:var(--room);font-weight:700;text-decoration:none}
 .sys .mass a:hover{text-decoration:underline}
 @media (max-width:960px){.layers-sec .head,.sys{grid-template-columns:1fr;gap:var(--f3)}.sys .mass{grid-column:auto;margin-top:0}.sys .layers{grid-column:auto;grid-row:auto}}
-@media (max-width:640px){.explode .hs{width:22px;height:22px;font-size:11px;line-height:22px;box-shadow:0 0 0 3px rgba(14,122,63,.18)}}
+@media (max-width:640px){.explode .hs{width:22px;height:22px;font-size:11px;line-height:22px;box-shadow:0 0 0 3px rgba(14,122,63,.18)}.explode .hs::after{content:"";position:absolute;inset:-11px;border-radius:50%}}
 
 /* ---------- Lokosana (Sondermodus Medizinprodukt: Leinen, ruhig, Pflichtangabe eigene Zeile) ---------- */
 .loko .head{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:end;margin-bottom:var(--f5)}
@@ -330,7 +330,8 @@ h3{font-size:var(--t-26);line-height:1.15}
 .case .pic img.on{opacity:1;transform:none}
 .case .pic .tag{z-index:2}
 .case .pic .dots{position:absolute;right:var(--f3);bottom:var(--f3);display:flex;gap:8px;z-index:2}
-.case .pic .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer}
+.case .pic .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.55);cursor:pointer;position:relative}
+.case .pic .dots button::after{content:"";position:absolute;inset:-9px}
 .case .pic .dots button[aria-selected="true"]{background:#fff}
 .case .pic .tag{position:absolute;left:var(--f3);top:var(--f3)}
 .case blockquote{margin:var(--f4) 0 var(--f2);font-family:var(--serif);font-weight:300;font-size:var(--t-26);line-height:1.3}
@@ -577,7 +578,7 @@ h3{font-size:var(--t-26);line-height:1.15}
     <div class="txt">
       <p class="eyebrow rv">Die Wissenschaft dahinter</p>
       <h2 class="rv d2">Schlafforschung seit 1989.</h2>
-      <p class="lead rv d3" style="margin-top:var(--f4)">Seit über drei Jahrzehnten erforscht Prof. Dr. med. h.c. Günther W. Amann-Jennson, was Schlaf erholsam macht. Für die Hotellerie hat er das Konzept <b>POWER SLEEPING ROOMS®</b> entwickelt: Zimmer, in denen Bett, Bettklima, Licht und Materialien auf eine ruhige Nacht abgestimmt sind.</p>
+      <p class="lead rv d3" style="margin-top:var(--f4)">Seit über drei Jahrzehnten erforscht Prof. Dr. med. h.c. Günther W. Amann-Jennson, Gründer und wissenschaftlicher Leiter von SAMINA, was Schlaf erholsam macht. Aus dieser Forschung ist das SAMINA Schlafsystem entstanden. Für die Hotellerie hat er das Konzept <b>POWER SLEEPING ROOMS®</b> entwickelt: Zimmer, in denen Bett, Bettklima, Licht und Materialien auf eine ruhige Nacht abgestimmt sind.</p>
       <p class="lead rv d4">Sie bekommen damit kein neues Möbelstück, sondern ein Schlafkonzept mit Herkunft. Eines, das man Gästen erklären kann, und das sie selbst erleben.</p>
     </div>
   </div>
