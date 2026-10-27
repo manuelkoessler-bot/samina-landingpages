@@ -238,7 +238,12 @@ h3{font-size:var(--t-26);line-height:1.15}
 .layers li.on b{color:var(--room)}
 .layers li.opt{border-top:1px dashed rgba(19,32,26,.35)}
 .layers li.opt b em{font-style:normal;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--room);margin-left:8px;white-space:nowrap}
-@media (max-width:960px){.layers-sec .head,.sys{grid-template-columns:1fr;gap:var(--f3)}}
+.sys .layers{grid-column:2;grid-row:1}
+.sys .mass{grid-column:1;font-size:15px;color:var(--ink-2);margin-top:calc(-1 * var(--f3))}
+.sys .mass b{color:var(--ink)}
+.sys .mass a{color:var(--room);font-weight:700;text-decoration:none}
+.sys .mass a:hover{text-decoration:underline}
+@media (max-width:960px){.layers-sec .head,.sys{grid-template-columns:1fr;gap:var(--f3)}.sys .mass{grid-column:auto;margin-top:0}.sys .layers{grid-column:auto;grid-row:auto}}
 @media (max-width:640px){.explode .hs{width:22px;height:22px;font-size:11px;line-height:22px;box-shadow:0 0 0 3px rgba(14,122,63,.18)}}
 
 /* ---------- Lokosana (Sondermodus Medizinprodukt: Leinen, ruhig, Pflichtangabe eigene Zeile) ---------- */
@@ -266,7 +271,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 .tilt .stick{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);align-items:center}
 .tilt .txt{padding:var(--sec) var(--f5) var(--sec) var(--c);width:100%}
 .tilt .txt .lead{font-size:16px}
-.tilt .stage{position:relative;width:100%;aspect-ratio:16/9;align-self:center;overflow:hidden}
+.tilt .stage{position:relative;width:100%;aspect-ratio:16/9;align-self:center;overflow:hidden;margin-right:var(--c);width:auto}
 .tilt .stage img{width:100%;height:100%;object-fit:cover}
 .hud{position:absolute;right:var(--f4);top:var(--f4);text-align:right}
 .hud .deg{font-family:var(--serif);font-weight:300;font-size:clamp(68px,8vw,110px);line-height:.9;color:var(--room)}
@@ -277,7 +282,7 @@ h3{font-size:var(--t-26);line-height:1.15}
 .tilt .note b{color:var(--ink)}
 @media (max-width:860px){
   .tilt .stick{grid-template-columns:1fr}
-  .tilt .stage{order:-1}
+  .tilt .stage{order:-1;margin-right:0}
   .tilt .txt{padding:var(--f5) var(--c)}
   .hud{top:var(--f3);right:var(--f3)}
   .hud .deg{font-size:55px}
@@ -425,6 +430,51 @@ h3{font-size:var(--t-26);line-height:1.15}
 .foot a:hover{color:#fff}
 .foot .nocookie{width:100%;color:rgba(234,243,230,.6);font-size:12px}
 
+/* ---------- Schrägbett: Häuser, die bereits schräg schlafen ---------- */
+.tilt .where{margin-top:var(--f4);font-size:13px;line-height:1.7;color:var(--ink-2);max-width:48ch}
+.tilt .where span{display:block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--room);font-size:11px;margin-bottom:6px}
+
+/* ---------- Stimmen aus Partnerhotels: ein Player (1,618) + Liste (1), YouTube lädt erst nach Klick ---------- */
+.vids{background:#fff;padding-top:calc(var(--sec) * .618)}
+.vcta{margin-top:var(--f4)}
+.vshow{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:var(--f5);align-items:center}
+/* Kartenstapel: vorne das spielbare Video, dahinter die nächsten */
+.vdeck{min-width:0;padding:13% 8% 0 0}
+.vcards{position:relative;aspect-ratio:16/9}
+.vcard{position:absolute;inset:0;background:var(--forest);overflow:hidden;isolation:isolate;transform-origin:100% 0;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s;box-shadow:0 21px 55px rgba(11,36,24,.28);will-change:transform}
+.vcard[data-k="0"]{z-index:3;transform:none}
+.vcard[data-k="1"]{z-index:2;transform:translate(5%,-8%) scale(.93);filter:brightness(.82);cursor:pointer}
+.vcard[data-k="2"]{z-index:1;transform:translate(10%,-16%) scale(.86);filter:brightness(.66);cursor:pointer}
+.vcard[data-k="1"]:hover{filter:brightness(.95)}
+.vcard .play{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:pointer}
+.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.vcard[data-k="0"] .play:hover img{transform:scale(1.04)}
+.vcard .play::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,36,24,.55),rgba(11,36,24,0) 55%);pointer-events:none}
+.vcard .pb{position:absolute;left:50%;top:50%;z-index:2;--pb:clamp(55px,6vw,89px);width:var(--pb);height:var(--pb);margin:calc(var(--pb)/-2) 0 0 calc(var(--pb)/-2);border-radius:50%;background:var(--samina);box-shadow:0 13px 34px rgba(11,36,24,.3);transition:transform .25s,background .2s,opacity .4s}
+.vcard .pb::before{content:"";position:absolute;left:55%;top:50%;transform:translate(-50%,-50%);border-style:solid;border-width:calc(var(--pb)*.14) 0 calc(var(--pb)*.14) calc(var(--pb)*.24);border-color:transparent transparent transparent #fff}
+.vcard[data-k="0"] .play:hover .pb{transform:scale(1.08);background:#007a31}
+.vcard:not([data-k="0"]) .pb,.vcard:not([data-k="0"]) .cap{opacity:0}
+.vcard .cap{position:absolute;left:var(--f3);right:var(--f3);bottom:var(--f3);z-index:2;color:#fff;text-align:left;transition:opacity .4s}
+.vcard .cap b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.2vw,32px);line-height:1.1}
+.vcard .cap span{display:block;margin-top:4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
+.vcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.vcount{margin-top:var(--f3);font:700 12px/1 var(--sans);letter-spacing:.08em;color:var(--ink-2)}
+.vitems{list-style:none;margin:var(--f4) 0 0;padding:0;border-top:1px solid var(--line)}
+.vitems li{border-bottom:1px solid var(--line)}
+.vitems button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:2px 13px;align-items:baseline;padding:var(--f2) 4px;cursor:pointer}
+.vitems button:focus-visible{outline:2px solid var(--room);outline-offset:2px}
+.vitems .n{font-family:var(--serif);font-size:24px;color:var(--room);line-height:1.15;grid-row:1 / span 2}
+.vitems b{font-weight:700;font-size:16px}
+.vitems .m{grid-column:2;font-size:13px;color:var(--ink-2)}
+.vitems .t{font:700 12px/1 var(--sans);letter-spacing:.06em;color:var(--ink-2)}
+.vitems button[aria-pressed="true"] b,.vitems button[aria-pressed="true"] .t{color:var(--room)}
+.vitems button:hover b{color:var(--room)}
+.vnav{display:flex;gap:6px;margin-top:var(--f3)}
+.vnav button{width:42px;height:42px;border:1px solid var(--ink);background:none;cursor:pointer;font-size:18px;color:var(--ink)}
+.vnav button:hover{background:var(--ink);color:#fff}
+@media (prefers-reduced-motion:reduce){.vcard{transition:none}}
+@media (max-width:960px){.vshow{grid-template-columns:1fr;gap:var(--f4)}.vdeck{padding:12% 7% 0 0}.vcard .cap b{font-size:20px}}
+
 </style>
 </head>
 <body>
@@ -451,11 +501,10 @@ h3{font-size:var(--t-26);line-height:1.15}
       <p class="sub rv d3">Longevity ist in aller Munde, und sie beginnt im Schlaf. Mit dem Bett- und Schlafsystem von SAMINA bieten Sie Ihren Gästen, wonach sie gerade suchen. Nutzen Sie den Trend zu Longevity und regenerativem Schlaf für Ihr Haus.</p>
       <div class="ctas rv d3">
         <a class="btn" href="#kontakt">Kontakt aufnehmen <span class="arr">→</span></a>
-        <a class="btn ghost" href="#welle">Warum jetzt</a>
+        <a class="btn ghost" href="#welle">Warum jetzt?</a>
       </div>
     </div>
   </div>
-  <span class="scrollhint" aria-hidden="true"></span>
 </section>
 
 <!-- 02 · DIE WELLE -->
@@ -483,6 +532,24 @@ h3{font-size:var(--t-26);line-height:1.15}
     <div class="wrap" id="stmt">
       <p class="big-s">Der Erste setzt den Maßstab.</p>
       <p class="claim-s" translate="no" lang="en">Sleep <span class="caps">SAMINA</span>. Design your Longevity</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02c · STIMMEN AUS PARTNERHOTELS (Trust früh): Kartenstapel, YouTube (nocookie) lädt erst nach Klick, läuft inline -->
+<section class="sec vids" id="videos">
+  <div class="wrap">
+    <div class="vshow">
+      <div class="vdeck rv"><div class="vcards" id="vcards"></div></div>
+      <div class="vtxt">
+        <p class="eyebrow rv">Stimmen aus Partnerhotels</p>
+        <h2 class="rv d2" style="font-size:var(--t-42);line-height:1.05">Hoteliers erzählen, warum sie auf SAMINA setzen.</h2>
+        <p class="lead rv d3" style="margin-top:var(--f3)">Drei Häuser, drei Geschichten. Ein Klick auf die vordere Karte startet das Video, es läuft direkt hier auf der Seite. Die Karte dahinter holt das nächste nach vorn.</p>
+        <ol class="vitems rv d3" id="vitems"></ol>
+        <div class="vnav rv d4"><button type="button" id="vprev" aria-label="Vorheriges Video">←</button><button type="button" id="vnext" aria-label="Nächstes Video">→</button></div>
+        <p class="vcount rv d4" id="vcount" aria-live="polite"></p>
+        <a class="btn line vcta rv d4" href="#kontakt">Das für Ihr Haus? Gespräch vereinbaren <span class="arr">→</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -532,13 +599,13 @@ h3{font-size:var(--t-26);line-height:1.15}
         <span class="no">01</span>
         <h3>Natur</h3>
         <p class="hl">Naturmaterialien. Handgefertigt in Vorarlberg.</p>
-        <p>Schafschurwolle, Naturkautschuk, Massivholz und Bio-Baumwolle. Metallfrei gebaut in unserer Manufaktur in Frastanz.</p>
+        <p>Merino-Schafschurwolle, Naturkautschuk, Massivholz und Bio-Baumwolle. Metallfrei gebaut in unserer Manufaktur in Frastanz.</p>
       </article>
       <article class="rv d2">
-        <img src="img/adriano_wildeiche.webp" alt="Bettrahmen Adriano aus Wildeiche, metallfrei gefertigt" loading="lazy" style="object-position:50% 50%">
+        <img src="img/loko_produkt.webp" alt="Lokosana Erdungsauflage mit Etikett, Produktfoto" loading="lazy" style="object-position:30% 0%">
         <span class="no">02</span>
         <h3>Technik</h3>
-        <p class="hl">Schrägschlaf. Körpererdung. Longevity-Anwendungen.</p>
+        <p class="hl">Schrägschlaf. Körpererdung. Ergonomisch richtige Wirbelsäulenlagerung.</p>
         <p>Fünf Schichten vom freischwingenden Lamellenrost bis zum Kissen, mit integrierter Körpererdung Lokosana®, einem registrierten Medizinprodukt. Dazu SAMINA GRAVITAS® für den Schlaf in sanfter Schräglage.</p>
       </article>
       <article class="rv d3">
@@ -560,7 +627,7 @@ h3{font-size:var(--t-26);line-height:1.15}
         <p class="eyebrow rv">Das SAMINA Bett- und Schlafsystem</p>
         <h2 class="rv d2">Fünf Schichten. Ein System.</h2>
       </div>
-      <p class="lead rv d3">Fünf Schichten aus Naturmaterialien, die zusammenwirken, mit Körpererdung im System. Sie passen in nahezu jeden Bettrahmen. Mit dem Bettrahmen Adriano kommt SAMINA GRAVITAS® dazu, für den Schlaf in sanfter Schräglage.</p>
+      <p class="lead rv d3">Fünf Schichten aus Naturmaterialien, die zusammenwirken, mit Körpererdung im System. Sie passen in nahezu jeden Bettrahmen und werden in Frastanz nach Maß gefertigt, auch in Sondergrößen. Mit dem Bettrahmen Adriano kommt SAMINA GRAVITAS® dazu, für den Schlaf in sanfter Schräglage.</p>
     </div>
     <div class="sys">
       <div class="explode rv" id="explode">
@@ -572,9 +639,10 @@ h3{font-size:var(--t-26);line-height:1.15}
         <button type="button" class="hs" style="left:66%;top:52%" data-l="4" aria-pressed="false" aria-label="Schicht 5">5</button>
         <button type="button" class="hs opt" style="left:70%;top:78%" data-l="5" aria-pressed="false" aria-label="Bettrahmen Adriano">+</button>
       </div>
+      <p class="mass rv d2"><b>Sondermaße? Sehr gerne.</b> Wir fertigen jedes Schlafsystem von Hand in den österreichischen Alpen, auch in Überlänge, Überbreite und Sonderform. <a href="#kontakt">Sprechen Sie uns an.</a></p>
       <ol class="layers rv d2" id="layers">
-        <li><button type="button"><span class="n">1</span><b>Kissen und Decken</b><span class="d">Kissen für jede Schlafposition, Decken mit Schafschurwolle, Bezüge aus Bio-Baumwolle.</span></button></li>
-        <li><button type="button"><span class="n">2</span><b>Schafschurwollauflage</b><span class="d">Hält trocken und sorgt für ein ausgeglichenes Schlafklima, in jeder Jahreszeit.</span></button></li>
+        <li><button type="button"><span class="n">1</span><b>Kissen und Decken</b><span class="d">Kissen für jede Schlafposition, Decken mit Merino-Schafschurwolle, Bezüge aus Bio-Baumwolle.</span></button></li>
+        <li><button type="button"><span class="n">2</span><b>Merino-Schafschurwollauflage</b><span class="d">Merino-Schafschurwolle hält trocken und sorgt für ein ausgeglichenes Schlafklima, in jeder Jahreszeit.</span></button></li>
         <li class="on"><button type="button"><span class="n">3</span><b>Lokosana® Körpererdung</b><span class="d">Registriertes und CE-gekennzeichnetes Medizinprodukt aus dem Hause SAMINA. Silber-Baumwoll-Gewebe, das durch die Wollschicht hindurch wirkt, ohne direkten Hautkontakt.</span></button></li>
         <li><button type="button"><span class="n">4</span><b>Naturkautschukmatratze</b><span class="d">Vita Talalay, punktelastisch und ohne Metallfedern. Passt sich dem Körper an und folgt der Neigung mit.</span></button></li>
         <li><button type="button"><span class="n">5</span><b>Freischwingender Lamellenrost</b><span class="d">Jede Lamelle schwingt einzeln mit und unterstützt die orthopädisch richtige Lagerung der Wirbelsäule, flach genauso wie in der Schräglage.</span></button></li>
@@ -592,13 +660,13 @@ h3{font-size:var(--t-26);line-height:1.15}
         <p class="eyebrow rv">Lokosana® · Körpererdung im SAMINA System</p>
         <h2 class="rv d2">Geerdet schlafen. Mit einem registrierten Medizinprodukt.</h2>
       </div>
-      <p class="lead rv d3">Über Jahrtausende war der Kontakt zur Erde selbstverständlich. Lokosana® bringt diese Verbindung dorthin, wo Ihre Gäste jede Nacht viele Stunden verbringen: ins Bett. Integriert in das SAMINA Schlafsystem, unsichtbar unter der Schafschurwollauflage. Seit 2021 bei Swissmedic als Medizinprodukt registriert und für den Einsatz in der EU und der Schweiz CE-gekennzeichnet.</p>
+      <p class="lead rv d3">Über Jahrtausende war der Kontakt zur Erde selbstverständlich. Lokosana® bringt diese Verbindung dorthin, wo Ihre Gäste jede Nacht viele Stunden verbringen: ins Bett. Integriert in das SAMINA Schlafsystem, unsichtbar unter der Merino-Schafschurwollauflage. Seit 2021 bei Swissmedic als Medizinprodukt registriert und für den Einsatz in der EU und der Schweiz CE-gekennzeichnet.</p>
     </div>
     <figure class="wide rv"><picture><source media="(max-width:860px)" srcset="img/loko_greenroom_hoch.webp"><img src="img/loko_greenroom.webp" alt="Frau im weißen Seidenpyjama liegt mit offenen Augen auf der Lokosana Erdungsauflage im Green Room" loading="lazy" width="1656" height="932"></picture><span class="ki">KI-generiert</span></figure>
     <div class="data">
       <div class="rv"><b>Registriertes Medizinprodukt</b><span>Klasse I bei Swissmedic, CE-gekennzeichnet für die EU und die Schweiz. Zur Förderung der Schlaf- und Regenerationsqualität.</span></div>
       <div class="rv d2"><b>99,99&#8239;%</b><span>Reinheitsgrad des Silbers im leitfähigen Silber-Baumwoll-Gewebe</span></div>
-      <div class="rv d3"><b>Ohne Hautkontakt</b><span>Die Erdung wirkt durch Schafschurwollauflage und Bettüberzug hindurch</span></div>
+      <div class="rv d3"><b>Ohne Hautkontakt</b><span>Die Erdung wirkt durch Merino-Schafschurwollauflage und Bettüberzug hindurch</span></div>
     </div>
   </div>
 </section>
@@ -612,6 +680,7 @@ h3{font-size:var(--t-26);line-height:1.15}
       <h2 class="rv d2" style="font-size:var(--t-42);line-height:1.05;margin-bottom:var(--f3)">Seit dem JENKE-Experiment spricht man über das Schrägbett.</h2>
       <p class="lead rv d3">Am 8. Oktober lief das JENKE-Experiment auf ProSieben, mit Prof. Dr. med. h.c. Günther W. Amann-Jennson und dem SAMINA Schlafsystem in Schräglage. Seitdem fragen uns viele Menschen danach. Hotels, die es anbieten, haben genau das, wonach Gäste gerade suchen.</p>
       <p class="note rv d4"><b>Unsere Empfehlung für Hotels: 3,5°.</b> Die ganze Liegefläche ist sanft geneigt, das Kopfende liegt rund 12 cm höher. Am Bettrahmen Adriano lässt sich die Neigung mit einem Handgriff auch zurück auf flach stellen.</p>
+      <p class="where rv d4"><span>Schräg geschlafen wird bereits in</span>Luisenhöhe Gesundheitsresort · Posthotel Alexander Herrmann · Gästehaus MY RESILIA · Hotel SONN’IDYLL · BIOHOTEL Gitschberg · Peterhof Chalets Furx</p>
     </div>
     <div class="stage">
       <img src="img/adriano_35.webp" alt="Bettrahmen Adriano aus Massivholz, auf 3,5 Grad geneigt" loading="lazy" width="1280" height="720">
@@ -696,7 +765,7 @@ h3{font-size:var(--t-26);line-height:1.15}
       <p class="lead rv d3">Regenerativer Schlaf ist das Thema, über das Gäste sprechen. Als SAMINA Partnerhotel sind Sie Teil dieses Trends. Und in Ihrer Region das Haus, an dem man beim Thema Longevity nicht vorbeikommt.</p>
     </div>
     <div class="bens">
-      <div class="rv"><span class="n">01</span><h3>Das Longevity-Zimmer</h3><p>Bett- und Schlafsystem nach dem Konzept POWER SLEEPING ROOMS®, geplant für Ihr Haus und Ihre Gäste.</p></div>
+      <div class="rv"><span class="n">01</span><h3>Das Longevity-Zimmer</h3><p>Bett- und Schlafsystem nach dem Konzept POWER SLEEPING ROOMS®, geplant für Ihr Haus und Ihre Gäste, nach Maß gefertigt in Frastanz.</p></div>
       <div class="rv d2"><span class="n">02</span><h3>Das Netzwerk</h3><p>Kostenlose Mitgliedschaft in der „Gesund Schlafen Hotelgruppe“ mit ihrem internationalen Netzwerk.</p></div>
       <div class="rv d3"><span class="n">03</span><h3>Die Geschichte</h3><p>Schlaf ist eine Geschichte, die Gäste weitererzählen. Wir liefern Bilder und Texte, mit denen Sie Ihr Schlafkonzept zeigen: im Zimmer, auf Ihrer Website, in Ihren Kanälen.</p></div>
       <div class="rv d4"><span class="n">04</span><h3>Die Sichtbarkeit</h3><p>Als Partnerhotel auf <a href="https://samina.travel/" target="_blank" rel="noopener" style="color:var(--room)">samina.travel</a> gelistet, der Reiseplattform, auf der SAMINA Schläfer ihr nächstes Urlaubsziel finden.</p></div>
@@ -709,7 +778,7 @@ h3{font-size:var(--t-26);line-height:1.15}
       <ol>
         <li class="rv"><div><b>Das Gespräch</b><span>30 Minuten, persönlich oder per Video. Wir hören zu: Haus, Gäste, Ziele.</span></div></li>
         <li class="rv d2"><div><b>Probe liegen</b><span>In unserer Manufaktur in Frastanz oder in einer SAMINA Filiale. Am besten schlafen Sie selbst eine Nacht darauf.</span></div></li>
-        <li class="rv d3"><div><b>Ihr Konzept</b><span>Vom ersten Zimmer bis zum ganzen Haus. Sie entscheiden das Tempo.</span></div></li>
+        <li class="rv d3"><div><b>Ihr Maß</b><span>Wir nehmen Maß in Ihrem Haus und fertigen in Frastanz, auch in Sondergrößen. Vom ersten Zimmer bis zum ganzen Haus, Sie entscheiden das Tempo.</span></div></li>
       </ol>
     </div>
   </div>
@@ -725,8 +794,9 @@ h3{font-size:var(--t-26);line-height:1.15}
     <div class="rv d2">
       <details><summary>Merken Gäste die Schräglage?</summary><p>Bei 3,5° liegt das Kopfende eines 2 m langen Betts rund 12 cm höher. Viele Gäste bemerken die Neigung in der Nacht nicht. Wer es lieber flach mag: Am Adriano lässt sich die Neigung jederzeit zurückstellen.</p></details>
       <details><summary>Muss ich das ganze Haus umrüsten?</summary><p>Nein. Sie können mit einzelnen Zimmern oder einer Zimmerkategorie beginnen und Schritt für Schritt erweitern. Was zu Ihrem Haus passt, besprechen wir im ersten Gespräch.</p></details>
-      <details><summary>Woraus besteht das System?</summary><p>Aus fünf Schichten: freischwingender Lamellenrost, Naturkautschukmatratze, Lokosana Erdungsauflage, Schafschurwollauflage sowie Decken und Kissen. Optional der Bettrahmen Adriano mit SAMINA GRAVITAS® für die Schräglage. Alles aus Naturmaterialien, handgefertigt in Vorarlberg.</p></details>
-      <details><summary>Wie entsteht Ihr Angebot?</summary><p>Jedes SAMINA Zimmer ist ein individuelles Angebot. Wir fertigen auch in Sondermaßen, und die Systemkonfiguration richtet sich nach Ihrem Haus, zum Beispiel mit oder ohne Körpererdung. Was genau zu Ihnen passt, ermitteln wir gemeinsam im Gespräch.</p></details>
+      <details><summary>Woraus besteht das System?</summary><p>Aus fünf Schichten: freischwingender Lamellenrost, Naturkautschukmatratze, Lokosana Erdungsauflage, Merino-Schafschurwollauflage sowie Decken und Kissen. Optional der Bettrahmen Adriano mit SAMINA GRAVITAS® für die Schräglage. Alles aus Naturmaterialien, handgefertigt in Vorarlberg.</p></details>
+      <details><summary>Passt SAMINA in meine bestehenden Betten?</summary><p>In den allermeisten Fällen ja. Das Schlafsystem passt in nahezu jeden Bettrahmen, und wir fertigen nach Maß: Überlängen, Überbreiten und Sondergrößen für Ihre vorhandenen Betten. Maß nehmen wir bei Ihnen vor Ort, gefertigt wird in Frastanz.</p></details>
+      <details><summary>Wie entsteht Ihr Angebot?</summary><p>Jedes SAMINA Zimmer ist ein individuelles Angebot. Die Systemkonfiguration richtet sich nach Ihrem Haus, Ihren Zimmerkategorien und Ihren Gästen. Was genau zu Ihnen passt, ermitteln wir gemeinsam im Gespräch.</p></details>
     </div>
   </div>
 </section>
@@ -770,7 +840,7 @@ h3{font-size:var(--t-26);line-height:1.15}
       <a href="https://samina.com/allgemeine-geschaeftsbedingungen/">AGB</a>
       <a href="https://samina.com/">samina.com</a>
     </nav>
-    <span class="nocookie">Diese Seite setzt keine Cookies und erfasst keine Nutzungsdaten.</span>
+    <span class="nocookie">Diese Seite setzt keine Cookies und erfasst keine Nutzungsdaten. Videos starten erst nach Klick und laden dann von YouTube.</span>
   </div>
 </footer>
 
@@ -836,6 +906,8 @@ const HOTELS = [
   ["h_posthotel","Posthotel Alexander Herrmann","Wirsberg · Bayern · DE"],
   ["h_fuchsegg","Fuchsegg Eco Lodge","Egg · Vorarlberg · AT"],
   ["h_resilia","Gästehaus MY RESILIA","Obermarchtal · DE"],
+  ["h_sonnidyll","Hotel SONN’IDYLL","Rathenow · Brandenburg · DE"],
+  ["h_alpinjuwel","Hotel Alpin Juwel","Saalbach-Hinterglemm · Salzburg · AT"],
   ["h_clinicum","Clinicum Alpinum","Gaflei · Liechtenstein"]
 ];
 const PEOPLE = [{"f": "p18.webp", "n": "Dr. Martin Schlott", "r": "Chefarzt & Schlafcoach", "hi": true}, {"f": "p02.webp", "n": "Alexander Herrmann", "r": "Sternekoch, Hotelier & Autor", "hi": true}, {"f": "p00.webp", "n": "Katharina Liensberger", "r": "Profi-Skirennläuferin", "hi": false}, {"f": "p01.webp", "n": "Ben Greenfield", "r": "Biohacker & Autor", "hi": false}, {"f": "p03.webp", "n": "Svenja Huth", "r": "Profi-Fussballerin", "hi": false}, {"f": "p04.webp", "n": "Teemu Arina", "r": "Biohacker, Autor & Gründer Biohacker Summit", "hi": false}, {"f": "p05.webp", "n": "Birgit Schrowange", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p06.webp", "n": "Panagiota Petridou", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p07.webp", "n": "Magdalena Egger", "r": "Profi-Skirennläuferin", "hi": false}, {"f": "p08.webp", "n": "Markus Linder", "r": "Kabarettist, Moderator, Schauspieler & Musiker", "hi": false}, {"f": "p09.webp", "n": "Birgit von Bentzel", "r": "Fernsehmoderatorin", "hi": false}, {"f": "p10.webp", "n": "Simon Amann", "r": "Profi-Skispringer", "hi": false}, {"f": "p11.webp", "n": "Detlef Steves", "r": "ehem. Gastronom, Reality-TV-Star", "hi": false}, {"f": "p12.webp", "n": "Andreas Breitfeld", "r": "Biohacker & Autor", "hi": false}, {"f": "p13.webp", "n": "Giulia Steingruber", "r": "ehem. Kunstturnerin", "hi": false}, {"f": "p14.webp", "n": "Max Gotzler", "r": "Biohacker & Autor", "hi": false}, {"f": "p15.webp", "n": "Motsi Mabuse", "r": "Tänzerin & Tanztrainerin", "hi": false}, {"f": "p16.webp", "n": "Ross Anthony", "r": "TV-Moderator, Musiker & Entertainer", "hi": false}, {"f": "p17.webp", "n": "Anna Funck", "r": "Journalistin, Moderatorin & Autorin", "hi": false}];
@@ -849,6 +921,47 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",
   e.preventDefault(); const y=tgt.getBoundingClientRect().top+scrollY-(head.offsetHeight||0);
   scrollTo({top:y, behavior: reduce?"auto":"smooth"}); history.replaceState(null,"","#"+id);
 }));
+
+/* ── Videos: Kartenstapel, Video läuft inline (YouTube nocookie lädt erst nach Klick) ── */
+const VIDEOS=[
+  {yt:"okcdPwIVsq4",img:"vid_alpinjuwel",b:"Gesund schlafen im Alpin Juwel",m:"Hotel Alpin Juwel · Saalbach-Hinterglemm · Salzburg",t:"1:45"},
+  {yt:"XyCmfAbY5VU",img:"vid_valavier",b:"Das ganze Haus schläft mit SAMINA",m:"Edy Meyer, Inhaber Valavier Aktivresort · Brand · Bericht K19 Regional",t:"2:52"},
+  {yt:"Th5wmUycA7o",img:"vid_clinicum",b:"Clinicum Alpinum x SAMINA",m:"Teil 4/4 · Klinik für mentale Gesundheit · Gaflei · Liechtenstein",t:"2:03"}
+];
+const vcards=$("vcards"), vitems=$("vitems"); let vi=0; const CARDS=[];
+function vthumb(card,v){
+  const b=el("button","play"); b.type="button"; b.setAttribute("aria-label","Video abspielen: "+v.b);
+  const i=el("img"); i.src="img/"+v.img+".webp"; i.alt=""; i.width=1280; i.height=720; i.loading="lazy";
+  const cap=el("div","cap"); cap.append(el("b",null,v.b),el("span",null,v.m+" · "+v.t));
+  b.append(i,el("span","pb"),cap);
+  b.addEventListener("click",()=>{
+    if(card.dataset.k!=="0"){ vshow(VIDEOS.indexOf(v)); return; }
+    const f=document.createElement("iframe");
+    f.src="https://www.youtube-nocookie.com/embed/"+v.yt+"?autoplay=1&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3";
+    f.title=v.b; f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen=true;
+    card.replaceChildren(f);
+  });
+  card.replaceChildren(b);
+}
+function vshow(k){
+  vi=(k+VIDEOS.length)%VIDEOS.length;
+  CARDS.forEach((card,n)=>{
+    const pos=(n-vi+VIDEOS.length)%VIDEOS.length;
+    if(pos!==0 && card.querySelector("iframe")) vthumb(card,VIDEOS[n]);   /* Video stoppt, wenn Karte nach hinten geht */
+    card.dataset.k=pos;
+  });
+  [...vitems.querySelectorAll("button")].forEach((x,n)=>x.setAttribute("aria-pressed", n===vi));
+  $("vcount").textContent=(vi+1)+" / "+VIDEOS.length;
+}
+VIDEOS.forEach((v,n)=>{
+  const card=el("div","vcard"); vthumb(card,v); vcards.append(card); CARDS.push(card);
+  const li=el("li"), b=el("button"); b.type="button"; b.append(el("span","n",String(n+1)),el("b",null,v.b),el("span","t",v.t),el("span","m",v.m)); b.onclick=()=>vshow(n); li.append(b); vitems.append(li);
+});
+$("vprev").onclick=()=>vshow(vi-1); $("vnext").onclick=()=>vshow(vi+1);
+/* Wischen auf Touch */
+let vx0=null; vcards.addEventListener("touchstart",e=>{vx0=e.touches[0].clientX},{passive:true});
+vcards.addEventListener("touchend",e=>{ if(vx0===null) return; const d=e.changedTouches[0].clientX-vx0; vx0=null; if(Math.abs(d)>45) vshow(d<0?vi+1:vi-1); },{passive:true});
+vshow(0);
 
 /* ── Header ── */
 const head=$("shead");
