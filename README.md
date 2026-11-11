@@ -2,7 +2,7 @@
 
 Zentrales Repo für alle SAMINA-Landingpages auf GitHub Pages unter der Domain **https://schlafen.samina.com** (DNS bei SAMINA: CNAME → manuelkoessler-bot.github.io).
 
-- Jede Landingpage = eigener Unterordner, z. B. `schraegbett/` → https://schlafen.samina.com/schraegbett/
+- Jede Landingpage = eigener Unterordner, z. B. `hotels/` → https://schlafen.samina.com/hotels/
 - Keine neuen github.io-Repos für SAMINA – immer hier einen Ordner anlegen.
 - `CNAME` nicht löschen (sonst fällt die Domain weg).
 - Vorschauen: `<meta name="robots" content="noindex, nofollow">` + `robots.txt` (Disallow) bis zur Freigabe.
@@ -10,6 +10,5 @@ Zentrales Repo für alle SAMINA-Landingpages auf GitHub Pages unter der Domain *
 
 | Ordner | Seite | Quelle (Claude-Projektordner) |
 |---|---|---|
-| `schraegbett/` | Weiterleitung → samina.com/gravitas-schraegschlafen/ (live seit 25.10.2026, Vorschau abgeschaltet) | `Projekte/Pillar_Schraegschlaf/pillar/` (`deploy.py`) |
 | `hotels/` | Vertriebs-LP Hotels „Ihr Upgrade mit SAMINA“ (noindex, 1:1-Akquise, ein Link, Kontakte durchklickbar) | `Projekte/LP_Hotels_v2/` (`build.py`) |
 | `hotelpraesentation/` | Hotelpräsentation (Deck, passwortgeschützt, StatiCrypt) – Philipp unter `/`, `/daniel`, `/mathias` | `Projekte/Praesentation_Hotels/` (`tools/deploy_hotels.sh`) |
