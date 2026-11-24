@@ -11,4 +11,5 @@ Zentrales Repo für alle SAMINA-Landingpages auf GitHub Pages unter der Domain *
 | Ordner | Seite | Quelle (Claude-Projektordner) |
 |---|---|---|
 | `hotels/` | Vertriebs-LP Hotels „Ihr Upgrade mit SAMINA“ (noindex, 1:1-Akquise, ein Link, Kontakte durchklickbar) | `Projekte/LP_Hotels_v2/` (`build.py`) |
+| `longevity-center/` | Vertriebs-LP Longevity-Center „Schlaf macht Ihr Longevity-Center komplett“ (noindex, Partner-Akquise, Green Room + A-Serie) | `Projekte/LP_Longevity_Center/` (`build.py`) |
 | `hotelpraesentation/` | Hotelpräsentation (Deck, passwortgeschützt, StatiCrypt) – Philipp unter `/`, `/daniel`, `/mathias` | `Projekte/Praesentation_Hotels/` (`tools/deploy_hotels.sh`) |
